@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+*{
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 68px;
+  transition: all 0s ease;
+  position: absolute;
+  height: 78%;
+  width: 100%;
+  overflow: auto;
+  top: 32px;
+}
+.sideBar {
+  height: 1060px;
+  width: 280px;
+}
+.side-bar {
+  width: 100%;
+  /* height: 1060px; */
+  overflow-y: scroll;
+  display: block;
+  position: fixed;
+  top: 98px;
+  bottom: 0;
+  overflow: auto;
+  border-right: 0.8px solid rgb(234,234,234);
+}
+.hcus{
+  height: 92% !important;
+}
+/* . .overflow-hidden .shadow-2 .rounded-borders >>> .hcus{
+  
+} */
+.appExpand {
+  /* transform: translate3d(-22%,0,0);
+  transition: all 0s ease; */
+  position: absolute;
+  left: -20%;
+  width: 120%;
+}
+
+.MuiTableCell-alignRight {
+  text-align: left !important;
+}
