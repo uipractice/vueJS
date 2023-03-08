@@ -1,12 +1,5 @@
 <template>
     <q-layout view="hHh Lpr lff" container style="height: 300px" class="shadow-2 rounded-borders hcus">
-      <!-- <q-header elevated class="bg-black">
-        <q-toolbar>
-          <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
-          <q-toolbar-title>Header</q-toolbar-title>
-        </q-toolbar>
-      </q-header> -->
-
       <q-drawer
         v-model="drawer"
         show-if-above
