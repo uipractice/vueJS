@@ -18,25 +18,28 @@
       <q-tab-panels v-model="tab" animated>
         <q-tab-panel name="demo">
           <div class="text-h6" >demo</div>
-            <ButtonDemo></ButtonDemo>
+            <ButtonDemo @childToParentClicked="showButtonCode"></ButtonDemo>
           
         </q-tab-panel>
 
         <q-tab-panel name="code">
           <div class="text-h6">code</div>
-           <ButtonCode></ButtonCode>
+          <pre>
+          {{ buttonCode }}
+        </pre>
         </q-tab-panel>
       </q-tab-panels>
     </q-card>
 </template>
 
 <script setup>
-import ButtonCode from './ButtonCode.vue';
 import ButtonDemo from './ButtonDemo.vue';
 import { ref } from 'vue'
   var  tab = ref('demo')
-
-
+  var  buttonCode = ref('')
+  const showButtonCode = perameter =>{
+      buttonCode.value = perameter
+  }
 </script>
 <style>
 .qCard{
