@@ -8,19 +8,26 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
       label: 'Basic Component',
       listOfSubCom:[
                    {
-                    "name":"button",
+                    "name":"Button",
                      "path":"/button",
                      "desc":"This is button component This is button component",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon
                    },
                    {
-                    "name":"button",
-                     "path":"/button",
-                     "desc":"This is button component This is button component",
+                    "name":"Avatar",
+                     "path":"/avatar",
+                     "desc":"This is avatar component This is button component",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon
-                    }
+                    },
+                    {
+                        "name":"Badge",
+                         "path":"/Badge",
+                         "desc":"This is Badge component This is button component",
+                         "logoSrc":buttonicon,
+                         "hovLogo":hovButtonIcon
+                        }
                   ],
       separator: true
     },
