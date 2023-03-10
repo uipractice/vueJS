@@ -11,14 +11,14 @@
         <q-scroll-area class="fit">
           <q-list>
 
-            <template v-for="(menuItem, index) in menuList" :key="index">
+            <template v-for="(menuItem, index) in menuListLocal" :key="index">
               <q-item  v-ripple>
                 
                 <q-item-section>
                   <details>
                     <summary>{{ menuItem.label }}</summary>
                     <p v-for="(menuSubItem, index) in menuItem.listOfSubCom" :key="index">
-                       <RouterLink to="/button">{{ menuSubItem }}</RouterLink>
+                       <RouterLink :to="menuSubItem.path">{{ menuSubItem.name }}</RouterLink>
                     </p>
                    
                   </details>
@@ -41,33 +41,17 @@
 <script>
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import {menuList} from '../utils/menuList'
 
-const menuList = [
-  {
-   
-    label: 'Basic Component',
-    listOfSubCom:['button','avtar'],
-    separator: true
-  },
-  {
-   
-    label: 'Form Component',
-    listOfSubCom:['input','checkbox'],
-    separator: false
-  },
-  {
-    
-    label: 'Utility Component',
-    listOfSubCom:['pagination','table'],
-    separator: false
-  }
-]
+console.log("menulist from utils",menuList);
+
+const menuListLocal = menuList.value
 
 export default {
   setup () {
     return {
       drawer: ref(true),
-      menuList
+      menuListLocal
     }
   }
 }

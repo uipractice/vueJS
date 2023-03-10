@@ -18,7 +18,7 @@
       <q-tab-panels v-model="tab" animated>
         <q-tab-panel name="demo">
           <div class="text-h6" >demo</div>
-            <ButtonDemo @childToParentClicked="showButtonCode"></ButtonDemo>
+            <ButtonDemoCode @childToParentClicked="showButtonCode"></ButtonDemoCode>
           
         </q-tab-panel>
 
@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import ButtonDemo from './ButtonDemo.vue';
+import ButtonDemoCode from './ButtonDemoCode.vue';
 import { ref } from 'vue'
   var  tab = ref('demo')
   var  buttonCode = ref('')
