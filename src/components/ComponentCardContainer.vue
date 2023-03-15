@@ -28,6 +28,6 @@ console.log("@@@ menulist in card",menuListLocal);
 .ownGrid{
   display: grid;
   gap: 50px;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: repeat(3, 1fr) 
 }
 </style>

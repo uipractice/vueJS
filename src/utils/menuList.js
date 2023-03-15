@@ -28,8 +28,7 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
                          "logoSrc":buttonicon,
                          "hovLogo":hovButtonIcon
                         }
-                  ],
-      separator: true
+                  ]
     },
     {
      
@@ -49,8 +48,7 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon
                     }
-                  ],
-      separator: false
+                  ]
     },
     {
       
@@ -69,9 +67,22 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon,
                      "desc":"This is button component This is button component",
-                    }
-                  ],
-      separator: false
+                    },
+                    {
+                      "name":"button",
+                       "path":"/button",
+                       "logoSrc":buttonicon,
+                       "hovLogo":hovButtonIcon,
+                       "desc":"This is button component This is button component",
+                      },
+                      {
+                        "name":"button",
+                         "path":"/button",
+                         "logoSrc":buttonicon,
+                         "hovLogo":hovButtonIcon,
+                         "desc":"This is button component This is button component",
+                        }
+                  ]
     }
   ])
 
