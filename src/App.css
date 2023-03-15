@@ -21,23 +21,6 @@
   height: 1060px;
   width: 280px;
 }
-.side-bar {
-  width: 100%;
-  /* height: 1060px; */
-  overflow-y: scroll;
-  display: block;
-  position: fixed;
-  top: 98px;
-  bottom: 0;
-  overflow: auto;
-  border-right: 0.8px solid rgb(234,234,234);
-}
-.hcus{
-  height: 92% !important;
-}
-/* . .overflow-hidden .shadow-2 .rounded-borders >>> .hcus{
-  
-} */
 .appExpand {
   /* transform: translate3d(-22%,0,0);
   transition: all 0s ease; */
