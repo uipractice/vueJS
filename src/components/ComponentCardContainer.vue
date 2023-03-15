@@ -15,20 +15,12 @@
 <script setup>
 import './ComponentCardContainer.css';
 import ComponentCard from './ComponentCard.vue'
-import buttonicon from '@/images/buttonicon.svg';
-import hovButtonIcon from '@/images/hovButtonIcon.svg';
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink } from 'vue-router'
 import { ref } from "vue";
 import { menuList } from '../utils/menuList';
 
-var propsObj = {
-  title:"Button",
-   desc:"This is button component This is button component This is button component This is button component This is button component This is button componentThis is button componentThis is button componentThis is button componentThis is button component" , 
-  logoSrc:buttonicon,
-  hovLogo:hovButtonIcon
-}
-
-var menuListLocal = menuList.value
+var menuListLocal = ref([])
+menuListLocal = menuList
 
 console.log("@@@ menulist in card",menuListLocal);
 </script>
