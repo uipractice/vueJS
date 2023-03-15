@@ -200,9 +200,9 @@ details > details > summary a:hover, details > details > summary a.active {
 .details > .summary:after {
   color: #373741;
   border-radius: 50%;
-  content: "";font-family: 'FontAwesome';
+  content: " \02C4";font-family: 'FontAwesome';
   float: right;
-  font-size: 1.2em;
+  font-size: 12px;
   font-weight: bold;
   text-align: center;
   line-height: 28px;
@@ -212,7 +212,7 @@ section > .details > .details > .summary::after {
   line-height: 25px;
 }
 .details[open] > .summary:after {
-  content: "";
+  content: " \02C5";
 }
 .details[open] .summary .active {
   

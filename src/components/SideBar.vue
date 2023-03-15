@@ -3,9 +3,10 @@
       <q-drawer
         v-model="drawer"
         show-if-above
-        :width="230"
+        :width="250"
         :breakpoint="500"
         bordered
+        class="q-pt-lg"
       >
         <q-scroll-area class="fit">
           <q-list>
@@ -77,5 +78,8 @@ export default {
 }
 section > .details > .summary {
   padding: 10px 15px 10px 25px !important;
+}
+a.router-link-active{
+  color: #0088D1 !important;
 }
 </style>

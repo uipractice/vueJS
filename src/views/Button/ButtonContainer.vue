@@ -1,12 +1,13 @@
 <template>
-    <q-card class="qCard">
+  <div class="componentWrapper">
+   <h3 class='btn-title'>{{ router.currentRoute.value.name?  router.currentRoute.value.name:'component' }}</h3>
+    <div class="step-tabs-wrapper">
       <q-tabs
       v-model="tab"
       no-caps
       outside-arrows
       mobile-arrows
       align="left"
-      class="shadow-2"
       >
         <q-tab name="demo" label="demo" />
         <q-tab name="code" label="code" />
@@ -29,12 +30,18 @@
         </pre>
         </q-tab-panel>
       </q-tab-panels>
-    </q-card>
+    </div>
+  </div> 
 </template>
 
 <script setup>
 import ButtonDemoCode from './ButtonDemoCode.vue';
+import './ButtonContainer.css'
 import { ref } from 'vue'
+import router from "@/router";
+ 
+console.log("router d",router.currentRoute.value, typeof router.currentRoute.value);
+
   var  tab = ref('demo')
   var  buttonCode = ref('')
   const showButtonCode = perameter =>{
@@ -46,4 +53,27 @@ import { ref } from 'vue'
 min-height: 100vh !important;
 
 }
+.componentWrapper{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+
+
+
+.step-tabs-wrapper {
+    
+    border: 1px solid rgba(0,0,0,.125);
+
+
+    width: 100% !important;
+   
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+
+    padding: 7px;
+    border-radius: 10px;
+    min-height: 600px
+}
+
 </style>
