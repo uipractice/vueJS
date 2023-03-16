@@ -9,24 +9,29 @@
         mobile-arrows
         align="left"
         >
-          <q-tab name="demo" label="demo" />
-          <q-tab name="code" label="code" />
+          <q-tab name="demo" label="Demo" />
+          <q-tab name="code" label="Code" />
           
         </q-tabs>
   
         <q-separator />
-  
         <q-tab-panels v-model="tab" animated>
-          <q-tab-panel name="demo">
-            <div class="text-h6" >demo</div>
-              <!-- <ButtonDemoCode @childToParentClicked="showButtonCode"></ButtonDemoCode> -->
-            
+          <q-tab-panel name="demo"  label="Demo">
+            <!-- <div class="text-h6" >demo</div> -->
+            <!-- prop name{{propsObj.propsDemo }} -->
+              <div v-for="(compoName,index) in compoNames" :key="index">
+             
+                <component v-if="compoName.__name == propsObj.propsDemo" :is="compoName"></component>  
+
+                
+            </div>
           </q-tab-panel>
   
-          <q-tab-panel name="code">
+          <q-tab-panel name="code" label="Code">
             <div class="text-h6">code</div>
             <pre>
-            <!-- {{ buttonCode }} -->
+               
+              {{ propsObj.propsCode }}
           </pre>
           </q-tab-panel>
         </q-tab-panels>
@@ -35,6 +40,21 @@
   </template>
   <script setup>
 import router from "@/router";
- 
- console.log("router d",router.currentRoute.value, typeof router.currentRoute.value);
+import { ref } from 'vue'
+import ButtonDemoCode from '@/views/Button/ButtonDemoCode.vue';
+
+
+ var compoNames = [ButtonDemoCode]
+
+ const propsObj = defineProps({
+    propsCode : {
+    type: String,
+    required: true
+  },
+  propsDemo: String,
+   
+})
+
+var  tab = ref('demo')
+
 </script>
