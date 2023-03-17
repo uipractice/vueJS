@@ -6,7 +6,7 @@ import {  RouterView } from 'vue-router'
 
 </script>
 <template>
-     <div className='app-breadcrumbs'>
+     <div class='app-breadcrumbs'>
        
     <q-breadcrumbs >
       <template v-slot:separator>

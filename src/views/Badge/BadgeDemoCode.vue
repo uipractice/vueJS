@@ -1,5 +1,5 @@
 <template>
-    <div className='demo-wrapper'>
+    <div class='demo-wrapper'>
   
       <q-badge rounded color="yellow" />
     <q-badge rounded color="green" />

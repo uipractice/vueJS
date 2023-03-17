@@ -28,11 +28,15 @@
           </q-tab-panel>
   
           <q-tab-panel name="code" label="Code">
-            <div class="text-h6">code</div>
-            <pre>
-               
-              {{ propsObj.propsCode }}
-          </pre>
+            <!-- <div class="text-h6">code</div> -->
+            <div  class="jsx-code-wrapper">
+                <h6>Vue Quasar code</h6>
+                <pre class="language-javascript" v-highlightjs="sourcecode" style="margin-right: 20px; background: rgb(255, 255, 255);">
+                    <code class="javascript">
+                        {{ propsObj.propsCode }}
+                    </code>
+                </pre>
+              </div>
           </q-tab-panel>
         </q-tab-panels>
       </div>
@@ -42,6 +46,7 @@
 import router from "@/router";
 import { ref } from 'vue'
 import ButtonDemoCode from '@/views/Button/ButtonDemoCode.vue';
+import '../css/styles.css'
 
 
  var compoNames = [ButtonDemoCode]
@@ -58,3 +63,41 @@ import ButtonDemoCode from '@/views/Button/ButtonDemoCode.vue';
 var  tab = ref('demo')
 
 </script>
+<style>
+/* pre{
+overflow-x: scroll;
+} */
+h6{
+    margin: 0px !important;
+}
+code{
+    padding: 5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+code{
+ min-height: 700px !important;
+}
+pre{
+    padding: 0 !important;
+  margin: 0  !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 0 !important;
+}
+.jsx-code-wrapper{
+    margin-top: 0px !important;
+}
+</style>

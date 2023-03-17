@@ -1,5 +1,5 @@
 <template>
-    <div className='demo-wrapper'>
+    <div class='demo-wrapper'>
   
         <q-avatar color="red" text-color="white" icon="directions" />
         <q-avatar color="primary" text-color="white">J</q-avatar>

@@ -1,5 +1,5 @@
 <template>
-     <div className='demo-wrapper'>
+     <div class='demo-wrapper'>
             <q-btn color="white" text-color="black" label="Standard" />
             <q-btn color="primary" label="Primary" />
             <q-btn color="secondary" label="Secondary" />
