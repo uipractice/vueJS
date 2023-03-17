@@ -31,7 +31,7 @@
             <!-- <div class="text-h6">code</div> -->
             <div  class="jsx-code-wrapper">
                 <h6>Vue Quasar code</h6>
-                <pre class="language-javascript" v-highlightjs="sourcecode" style="margin-right: 20px; background: rgb(255, 255, 255);">
+                <pre class="language-javascript" v-highlightjs style="margin-right: 20px; background: rgb(255, 255, 255);">
                     <code class="javascript">
                         {{ propsObj.propsCode }}
                     </code>

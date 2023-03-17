@@ -6,12 +6,10 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(
-
-    ),
-    quasar({
-      sassVariables: 'src/quasar-variables.scss'
-    })
+    vue({
+      template: { transformAssetUrls }
+}),
+    quasar()
   ],
   resolve: {
     alias: {
