@@ -1167,14 +1167,14 @@ color:
     border-radius:0;
      margin-top:-2px;
   }
-  .tabAccordion .tab-pane &:first-child .panel{
+  /* .tabAccordion .tab-pane &:first-child .panel{
     
         border-radius:5px 5px 0 0;
     }
     .tabAccordion .tab-pane &:last-child .panel{
       
         border-radius:0 0 5px 5px;
-  }
+  } */
 }
 
 
@@ -3462,7 +3462,7 @@ margin-bottom: 1rem !important;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-//for flex concept//
+/* //for flex concept// */
 .my-flex-container {
     border: 2px solid green;
     height: 100px;
@@ -4134,8 +4134,8 @@ color: #004d40;
 }
 }
 /*classes for kebabmenu*/
-$cubic-out: cubic-bezier(.32,2.04,.85,.54);
-$cubic-in: cubic-bezier(.72,1.2,.71,.72);
+/* $cubic-out: cubic-bezier(.32,2.04,.85,.54); */
+/* $cubic-in: cubic-bezier(.72,1.2,.71,.72);
 $nunito: 'Nunito', sans-serif;
 $roboto: Roboto, sans-serif;
 
@@ -4143,9 +4143,9 @@ $cyan: #00bcd4;
 $yellow: #ffeb3b;
 $grey: #9e9e9e;
 
-$shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+$shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12); */
 
-// Kebab styling
+/* // Kebab styling */
 
 .kebab {
   cursor: pointer;
@@ -4154,13 +4154,13 @@ $shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   padding: 0 16px;
   top: 12px;
-  figure {
+  /* figure {
     width: 6px;
     height: 6px;
     border-radius: 5px;
     background: $cyan;
     margin: 3px 0;
-  }
+  } */
 }
 
 .middle {
@@ -4196,7 +4196,7 @@ $shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
   transition: all 0.15s $cubic-out;
 }
 
-// Other styling
+/* // Other styling */
 
 a, li {
   color: darken($grey, 20%);
@@ -4238,7 +4238,7 @@ a, li {
   transition: all 0.25s cubic-bezier(.5,1.8,.9,.8);
 }
 
-//---------------------------------------------
+/* //--------------------------------------------- */
 
 .follow {
   overflow: hidden;
