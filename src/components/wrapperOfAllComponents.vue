@@ -32,7 +32,7 @@
             <div  class="jsx-code-wrapper">
                 <h6>Vue Quasar code</h6>
                 <pre class="language-javascript" v-highlightjs style="margin-right: 20px; background: rgb(255, 255, 255);">
-                    <code class="javascript">
+                    <code class="javascript"   style="background: white !important;">
                         {{ propsObj.propsCode }}
                     </code>
                 </pre>
@@ -45,7 +45,7 @@
   <script setup>
 import router from "@/router";
 import { ref } from 'vue'
-import ButtonDemoCode from '@/views/Button/ButtonDemoCode.vue';
+import ButtonDemoCode from '@/pages/Button/ButtonDemoCode.vue';
 import '../css/styles.css'
 
 
