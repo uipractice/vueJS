@@ -1,5 +1,5 @@
 <template>
-    <q-layout view="hHh Lpr lff" container style="height: 500px" class="shadow-2 rounded-borders">
+    <q-layout view="hHh Lpr lff" container  class="shadow-2 rounded-borders">
       <q-drawer
         v-model="drawer"
         show-if-above

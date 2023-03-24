@@ -7,7 +7,6 @@
 <script setup>
 
 import wrapperOfAllComponents from '../../components/wrapperOfAllComponents.vue'
-import './ButtonContainer.css'
 import { ref } from 'vue'
 
   var  buttonCode = ref('')
