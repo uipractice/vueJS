@@ -46,10 +46,17 @@
 import router from "@/router";
 import { ref } from 'vue'
 import ButtonDemoCode from '@/pages/Button/ButtonDemoCode.vue';
+import AvatarDemoCode from '@/pages/Avatar/AvatarDemoCode.vue';
+import BadgeDemoCode from '@/pages/Badge/BadgeDemoCode.vue';
+import BreadCrumbsDemoCode from '@/pages/BreadCrumbs/BreadCrumbsDemoCode.vue';
+import CardsDemoCode from '@/pages/Cards/CardsDemoCode.vue';
+import CircularProgressDemoCode from '@/pages/CircularProgress/CircularProgressDemoCode.vue';
+import DialogDemoCode from '@/pages/Dialog/DialogDemoCode.vue';
+
 import '../css/styles.css'
 
 
- var compoNames = [ButtonDemoCode]
+ var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode]
 
  const propsObj = defineProps({
     propsCode : {

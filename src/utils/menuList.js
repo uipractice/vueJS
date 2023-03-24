@@ -7,27 +7,58 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
      
       label: 'Basic Component',
       listOfSubCom:[
+                  {
+                  "name":"Avatar",
+                  "path":"/avatar",
+                  "desc":"This is avatar component",
+                  "logoSrc":buttonicon,
+                  "hovLogo":hovButtonIcon
+                  },
                    {
                     "name":"Button",
                      "path":"/button",
-                     "desc":"This is button component This is button component",
+                     "desc":"This is button component",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon
                    },
-                   {
-                    "name":"Avatar",
-                     "path":"/avatar",
-                     "desc":"This is avatar component This is button component",
-                     "logoSrc":buttonicon,
-                     "hovLogo":hovButtonIcon
-                    },
                     {
                         "name":"Badge",
                          "path":"/Badge",
-                         "desc":"This is Badge component This is button component",
+                         "desc":"This is Badge component",
                          "logoSrc":buttonicon,
                          "hovLogo":hovButtonIcon
-                        }
+                    },
+                    {
+                    "name":"BreadCrumbs",
+                    "path":"/BreadCrumbs",
+                    "desc":"This is BreadCrumbs component",
+                    "logoSrc":buttonicon,
+                    "hovLogo":hovButtonIcon
+                   },
+                   {
+                    "name":"Cards",
+                    "path":"/Cards",
+                    "desc":"This is Cards component",
+                    "logoSrc":buttonicon,
+                    "hovLogo":hovButtonIcon
+                   },
+                   {
+                    "name":"CircularProgress",
+                    "path":"/CircularProgress",
+                    "desc":"This is  CircularProgress component",
+                    "logoSrc":buttonicon,
+                    "hovLogo":hovButtonIcon
+                   },
+                   {
+                    "name":"Dialog",
+                    "path":"/Dialog",
+                    "desc":"This is  Dialog component",
+                    "logoSrc":buttonicon,
+                    "hovLogo":hovButtonIcon
+                   }
+                   
+                  
+                      
                   ]
     },
     {
@@ -37,14 +68,14 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
                    {
                     "name":"button",
                      "path":"/button",
-                     "desc":"This is button component This is button component",
+                     "desc":"This is button component",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon
                    },
                    {
                     "name":"button",
                      "path":"/button",
-                     "desc":"This is button component This is button component",
+                     "desc":"This is button component",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon
                     }
@@ -59,28 +90,28 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
                      "path":"/button",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon,
-                     "desc":"This is button component This is button component",
+                     "desc":"This is button component",
                    },
                    {
                     "name":"button",
                      "path":"/button",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon,
-                     "desc":"This is button component This is button component",
+                     "desc":"This is button component",
                     },
                     {
                       "name":"button",
                        "path":"/button",
                        "logoSrc":buttonicon,
                        "hovLogo":hovButtonIcon,
-                       "desc":"This is button component This is button component",
+                       "desc":"This is button component",
                       },
                       {
                         "name":"button",
                          "path":"/button",
                          "logoSrc":buttonicon,
                          "hovLogo":hovButtonIcon,
-                         "desc":"This is button component This is button component",
+                         "desc":"This is button component",
                         }
                   ]
     }

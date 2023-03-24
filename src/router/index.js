@@ -33,6 +33,39 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../pages/Badge/BadgeContainer.vue')
     },
+    {
+      path: '/breadCrumbs',
+      name: 'breadCrumbs',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../pages/BreadCrumbs/BreadCrumbsContainer.vue')
+    },
+    {
+      path: '/cards',
+      name: 'cards',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../pages/cards/CardsContainer.vue')
+    },
+    {
+      path: '/CircularProgress',
+      name: 'CircularProgress',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../pages/CircularProgress/CircularProgressContainer.vue')
+    },
+    {
+      path: '/Dialog',
+      name: 'Dialog',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../pages/Dialog/DialogContainer.vue')
+    },
+    
 
   ]
 })
