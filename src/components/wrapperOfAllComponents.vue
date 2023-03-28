@@ -52,11 +52,15 @@ import BreadCrumbsDemoCode from '@/pages/BreadCrumbs/BreadCrumbsDemoCode.vue';
 import CardsDemoCode from '@/pages/Cards/CardsDemoCode.vue';
 import CircularProgressDemoCode from '@/pages/CircularProgress/CircularProgressDemoCode.vue';
 import DialogDemoCode from '@/pages/Dialog/DialogDemoCode.vue';
+import InputDemoCode from '@/pages/Input/InputDemoCode.vue';
+import DropdownDemoCode from '@/pages/Dropdown/DropdownDemoCode.vue';
+import FileUploadDemoCode from '@/pages/FileUpload/FileUploadDemoCode.vue';
+
 
 import '../css/styles.css'
 
 
- var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode]
+ var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode]
 
  const propsObj = defineProps({
     propsCode : {
