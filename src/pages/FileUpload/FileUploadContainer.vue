@@ -112,6 +112,11 @@ import { ref } from 'vue'
         @rejected="onRejected"
       />
         </div>
+
+        import { ref } from 'vue'
+  var model = ref(null)
+ var files = ref(null)
+ var file = ref(null)
         `
 </script>
 <style>

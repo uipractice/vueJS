@@ -1,41 +1,84 @@
 <template>
      <div class='demo-wrapper'>
-            <q-btn color="white" text-color="black" label="Standard" />
-            <q-btn color="primary" label="Primary" />
-            <q-btn color="secondary" label="Secondary" />
-            <q-btn color="amber" glossy label="Amber" />
-            <q-btn color="brown-5" label="Brown 5" />
-            <q-btn color="deep-orange" glossy label="Deep Orange" />
-            <q-btn color="purple" label="Purple" />
-            <q-btn color="black" label="Black" />
+          
       
       <div class="q-pa-md q-gutter-sm">
-            <q-btn style="background: #FF0080; color: white" label="Fuchsia" />
-            <q-btn flat style="color: #FF0080" label="Fuchsia Flat" />
-            <q-btn style="background: goldenrod; color: white" label="Goldenrod" />
-            <q-btn outline style="color: goldenrod;" label="Goldenrod" />
-            <q-btn color="grey-4" text-color="purple" glossy unelevated icon="camera_enhance" label="Purple text" />
+            
+         <q-checkbox v-model="val" />
+  
       </div>
 
       <div class="q-pa-md q-gutter-sm">
-            <q-btn color="primary" icon="mail" label="On Left" />
-            <q-btn color="secondary" icon-right="mail" label="On Right" />
-            <q-btn color="red" icon="mail" icon-right="send" label="On Left and Right" />
-            <br>
-            <q-btn icon="phone" label="Stacked" stack glossy color="purple" />
+            <div>
+        <q-checkbox v-model="right" label="Label on Right" />
+      </div>
+
+      <div>
+        <q-checkbox left-label v-model="left" label="Label on Left" />
+      </div>
+
+      <div>
+        <q-checkbox
+          v-model="right2"
+          label="Swipe"
+          checked-icon="swipe_left"
+          unchecked-icon="swipe_right"
+          color="green"
+          keep-color
+        />
+      </div>
+
+      <div>
+        <q-checkbox
+          left-label
+          v-model="left2"
+          label="I agree"
+          checked-icon="task_alt"
+          unchecked-icon="highlight_off"
+        />
+      </div>
       </div>
       <div class="q-pa-md q-gutter-sm">
-            <q-btn round color="primary" icon="shopping_cart" />
-            <q-btn round color="secondary" icon="navigation" />
-            <q-btn round color="amber" glossy text-color="black" icon="layers_clear" />
-            <q-btn round color="brown-5" icon="directions" />
-            <q-btn round color="deep-orange" icon="edit_location" />
-            <q-btn round color="purple" glossy icon="local_grocery_store" />
-            <q-btn round color="black" icon="my_location" />
+            <q-checkbox v-model="teal" label="Teal" color="teal" />
+      <q-checkbox v-model="orange" label="Orange" color="orange" />
+      <q-checkbox v-model="red" label="Red" color="red" />
+      <q-checkbox v-model="cyan" label="Cyan" color="cyan" />
+    
+      </div>
+      <div class="q-pa-md q-gutter-sm">
+           <h5> {{ selection }}</h5>
+      <q-checkbox v-model="selection" val="teal" label="Teal Array" color="teal" />
+      <q-checkbox v-model="selection" val="orange" label="Orange Array" color="orange" />
+      <q-checkbox v-model="selection" val="red" label="Red Array" color="red" />
+      <q-checkbox v-model="selection" val="cyan" label="Cyan Array" color="cyan" />
+      </div>
+      <div class="q-pa-md q-gutter-sm">
+            <q-checkbox disable v-model="teal" label="One Disabled" />
+      <q-checkbox disable v-model="orange" label="Two Disabled" />
+      <q-item tag="label" v-ripple>
+        <q-item-section avatar>
+          <q-checkbox v-model="color" val="orange" color="orange" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Orange</q-item-label>
+          <q-item-label caption>With description</q-item-label>
+        </q-item-section>
+      </q-item>
       </div>
     </div>
   </template>
 
   <script setup>
-//   import { ref } from 'vue'
+  import { ref } from 'vue'
+  var val = ref('')
+      var left=ref(true)
+      var right= ref(false)
+      var left2= ref(true)
+      var right2= ref(false)
+var selection= ref(['red'])
+var color= ref(['cyan'])
+     var teal= ref(true)
+     var orange= ref(false)
+     var red= ref(false)
+     var cyan= ref(true)
   </script>
