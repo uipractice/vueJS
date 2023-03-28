@@ -18,10 +18,13 @@
         <q-tab-panels v-model="tab" animated>
           <q-tab-panel name="demo"  label="Demo">
             <!-- <div class="text-h6" >demo</div> -->
-            <!-- prop name{{propsObj.propsDemo }} -->
+            <!-- prop name{{propsObj.propsDemo }}
+            {{ compoNames }} -->
               <div v-for="(compoName,index) in compoNames" :key="index">
              
-                <component v-if="compoName.__name == propsObj.propsDemo" :is="compoName"></component>  
+                <component v-if="compoName.__name == propsObj.propsDemo" :is="compoName">
+                   
+                </component>  
 
                 
             </div>
@@ -52,11 +55,18 @@ import BreadCrumbsDemoCode from '@/pages/BreadCrumbs/BreadCrumbsDemoCode.vue';
 import CardsDemoCode from '@/pages/Cards/CardsDemoCode.vue';
 import CircularProgressDemoCode from '@/pages/CircularProgress/CircularProgressDemoCode.vue';
 import DialogDemoCode from '@/pages/Dialog/DialogDemoCode.vue';
+import InputDemoCode from '@/pages/Input/InputDemoCode.vue';
+import DropdownDemoCode from '@/pages/Dropdown/DropdownDemoCode.vue';
+import FileUploadDemoCode from '@/pages/FileUpload/FileUploadDemoCode.vue';
+import FormDemoCode from '@/pages/Form/FormDemoCode.vue';
+import RadioDemoCode from '@/pages/Radio/RadioDemoCode.vue';
+import CheckboxDemoCode from '@/pages/Checkbox/CheckboxDemoCode.vue';
+
 
 import '../css/styles.css'
 
 
- var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode]
+ var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode]
 
  const propsObj = defineProps({
     propsCode : {

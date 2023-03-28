@@ -65,20 +65,62 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
      
       label: 'Form Component',
       listOfSubCom:[
+                {
+                  "name":"Input",
+                  "path":"/Input",
+                  "desc":"This is Input component",
+                  "logoSrc":buttonicon,
+                  "hovLogo":hovButtonIcon
+                  } , 
+                {
+                  "name":"Dropdown",
+                  "path":"/Dropdown",
+                  "desc":"This is Dropdown component",
+                  "logoSrc":buttonicon,
+                  "hovLogo":hovButtonIcon
+                  } , 
                    {
-                    "name":"button",
-                     "path":"/button",
-                     "desc":"This is button component",
+                    "name":"FileUpload",
+                     "path":"/FileUpload",
+                     "desc":"This is FileUpload component",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon
-                   },
-                   {
-                    "name":"button",
-                     "path":"/button",
-                     "desc":"This is button component",
-                     "logoSrc":buttonicon,
-                     "hovLogo":hovButtonIcon
-                    }
+                    } , 
+                    {
+                      "name":"Form",
+                       "path":"/Form",
+                       "desc":"This is Form component",
+                       "logoSrc":buttonicon,
+                       "hovLogo":hovButtonIcon
+                     },
+                     {
+                      "name":"Radio",
+                       "path":"/Radio",
+                       "desc":"This is Radio component",
+                       "logoSrc":buttonicon,
+                       "hovLogo":hovButtonIcon
+                     },
+                     {
+                      "name":"Checkbox",
+                       "path":"/Checkbox",
+                       "desc":"This is Checkbox component",
+                       "logoSrc":buttonicon,
+                       "hovLogo":hovButtonIcon
+                     },
+                     {
+                      "name":"Form",
+                       "path":"/Form",
+                       "desc":"This is Form component",
+                       "logoSrc":buttonicon,
+                       "hovLogo":hovButtonIcon
+                     },
+                     {
+                      "name":"Form",
+                       "path":"/Form",
+                       "desc":"This is Form component",
+                       "logoSrc":buttonicon,
+                       "hovLogo":hovButtonIcon
+                     },
                   ]
     },
     {
