@@ -1,41 +1,110 @@
 <template>
      <div class='demo-wrapper'>
-            <q-btn color="white" text-color="black" label="Standard" />
-            <q-btn color="primary" label="Primary" />
-            <q-btn color="secondary" label="Secondary" />
-            <q-btn color="amber" glossy label="Amber" />
-            <q-btn color="brown-5" label="Brown 5" />
-            <q-btn color="deep-orange" glossy label="Deep Orange" />
-            <q-btn color="purple" label="Purple" />
-            <q-btn color="black" label="Black" />
-      
+      <div class="q-gutter-md">
+      <q-file v-model="model" label="Standard" />
+
+      <q-file filled v-model="model" label="Filled" />
+
+      <q-file outlined v-model="model" label="Outlined" />
+      <q-file outlined v-model="model">
+        <template v-slot:prepend>
+          <q-icon name="attach_file" />
+        </template>
+      </q-file>
+      </div>
       <div class="q-pa-md q-gutter-sm">
-            <q-btn style="background: #FF0080; color: white" label="Fuchsia" />
-            <q-btn flat style="color: #FF0080" label="Fuchsia Flat" />
-            <q-btn style="background: goldenrod; color: white" label="Goldenrod" />
-            <q-btn outline style="color: goldenrod;" label="Goldenrod" />
-            <q-btn color="grey-4" text-color="purple" glossy unelevated icon="camera_enhance" label="Purple text" />
+            <q-file color="orange" filled v-model="model" label="Clearable">
+        <template v-if="model" v-slot:append>
+          <q-icon name="cancel" @click.stop.prevent="model = null" class="cursor-pointer" />
+        </template>
+      </q-file>
+      <q-file
+        disable
+        filled
+        v-model="model"
+        hint="Disable"
+        style="width: 250px"
+      />
+
+      <q-file
+        readonly
+        filled
+        v-model="model"
+        hint="Readonly"
+        style="width: 250px"
+      />
+      <q-file
+      v-model="files"
+      label="Pick files"
+      filled
+      multiple
+      style="max-width: 300px"
+    />
+    <q-file
+      v-model="file"
+      label="Pick files with append"
+      filled
+      multiple
+      append
+      style="max-width: 300px"
+    />
+    <q-file
+      v-model="files"
+      label="Pick files as Chips"
+      outlined
+      use-chips
+      multiple
+      style="max-width: 300px"
+    />
+    <q-file
+        style="max-width: 300px"
+        v-model="filesImages"
+        filled
+        rounded
+        label="Restricted to images"
+        multiple
+        accept=".jpg, image/*"
+        @rejected="onRejected"
+      />
+
+      <q-file
+        style="max-width: 300px"
+        v-model="filesMaxSize"
+        outlined
+        label="Max file size (2k)"
+        multiple
+        max-file-size="2048"
+        @rejected="onRejected"
+      />
+      <q-file
+        style="max-width: 300px"
+        v-model="filesMaxNumber"
+        standout
+        label="Max number of files (3)"
+        multiple
+        max-files="3"
+        @rejected="onRejected"
+      />
       </div>
 
       <div class="q-pa-md q-gutter-sm">
-            <q-btn color="primary" icon="mail" label="On Left" />
-            <q-btn color="secondary" icon-right="mail" label="On Right" />
-            <q-btn color="red" icon="mail" icon-right="send" label="On Left and Right" />
-            <br>
-            <q-btn icon="phone" label="Stacked" stack glossy color="purple" />
+            <q-file
+        style="max-width: 300px"
+        v-model="filesMaxSize"
+        filled
+        label="Filtered (for <2k size)"
+        multiple
+        :filter="checkFileSize"
+        @rejected="onRejected"
+      />
       </div>
-      <div class="q-pa-md q-gutter-sm">
-            <q-btn round color="primary" icon="shopping_cart" />
-            <q-btn round color="secondary" icon="navigation" />
-            <q-btn round color="amber" glossy text-color="black" icon="layers_clear" />
-            <q-btn round color="brown-5" icon="directions" />
-            <q-btn round color="deep-orange" icon="edit_location" />
-            <q-btn round color="purple" glossy icon="local_grocery_store" />
-            <q-btn round color="black" icon="my_location" />
-      </div>
+    
     </div>
   </template>
 
   <script setup>
-//   import { ref } from 'vue'
+  import { ref } from 'vue'
+  var model = ref(null)
+ var files = ref(null)
+ var file = ref(null)
   </script>
