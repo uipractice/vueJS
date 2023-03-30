@@ -82,7 +82,7 @@ const router = createRouter({
     {
       path: '/QDate',
       name: 'QDate',
-      component: () => import('../pages/QDate/QDateContainer.vue')
+      component: () => import('../pages/Qdate/QdateContainer.vue')
     },
     {
       path: '/InnerLoading',
@@ -92,7 +92,7 @@ const router = createRouter({
     {
       path: '/Menu',
       name: 'Menu',
-      component: () => import('../pages/Menu/menuContainer.vue')
+      component: () => import('../pages/Menu/MenuContainer.vue')
     },
     
     
