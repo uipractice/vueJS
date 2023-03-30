@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: '/cards',
       name: 'cards',
-      component: () => import('../pages/cards/CardsContainer.vue')
+      component: () => import('../pages/Cards/CardsContainer.vue')
     },
     {
       path: '/CircularProgress',
@@ -75,15 +75,26 @@ const router = createRouter({
       component: () => import('../pages/Checkbox/CheckboxContainer.vue')
     },
     {
-      path: '/FileUpload',
-      name: 'FileUpload',
-      component: () => import('../pages/FileUpload/FileUploadContainer.vue')
+      path: '/Toggle',
+      name: 'Toggle',
+      component: () => import('../pages/Toggle/ToggleContainer.vue')
     },
     {
-      path: '/FileUpload',
-      name: 'FileUpload',
-      component: () => import('../pages/FileUpload/FileUploadContainer.vue')
+      path: '/QDate',
+      name: 'QDate',
+      component: () => import('../pages/QDate/QDateContainer.vue')
     },
+    {
+      path: '/InnerLoading',
+      name: 'InnerLoading',
+      component: () => import('../pages/InnerLoading/InnerLoadingContainer.vue')
+    },
+    {
+      path: '/Menu',
+      name: 'Menu',
+      component: () => import('../pages/Menu/menuContainer.vue')
+    },
+    
     
 
   ]

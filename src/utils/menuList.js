@@ -108,19 +108,34 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
                        "hovLogo":hovButtonIcon
                      },
                      {
-                      "name":"Form",
-                       "path":"/Form",
-                       "desc":"This is Form component",
+                      "name":"Toggle",
+                       "path":"/Toggle",
+                       "desc":"This is Toggle component",
                        "logoSrc":buttonicon,
                        "hovLogo":hovButtonIcon
                      },
                      {
-                      "name":"Form",
-                       "path":"/Form",
-                       "desc":"This is Form component",
+                      "name":"QDate",
+                       "path":"/QDate",
+                       "desc":"This is QDate component",
                        "logoSrc":buttonicon,
                        "hovLogo":hovButtonIcon
                      },
+                     {
+                      "name":" InnerLoading",
+                       "path":"/InnerLoading",
+                       "desc":"This is  InnerLoading component",
+                       "logoSrc":buttonicon,
+                       "hovLogo":hovButtonIcon
+                     },
+                     {
+                      "name":"Menu",
+                       "path":"/Menu",
+                       "desc":"This is Menu component",
+                       "logoSrc":buttonicon,
+                       "hovLogo":hovButtonIcon
+                     },
+                    
                   ]
     },
     {
