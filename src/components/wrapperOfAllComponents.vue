@@ -61,12 +61,15 @@ import FileUploadDemoCode from '@/pages/FileUpload/FileUploadDemoCode.vue';
 import FormDemoCode from '@/pages/Form/FormDemoCode.vue';
 import RadioDemoCode from '@/pages/Radio/RadioDemoCode.vue';
 import CheckboxDemoCode from '@/pages/Checkbox/CheckboxDemoCode.vue';
-
+import ToggleDemoCode from '@/pages/Toggle/ToggleDemoCode.vue';
+import QdateDemoCode from '@/pages/Qdate/QdateDemoCode.vue';
+import InnerLoadingDemoCode from '@/pages/InnerLoading/InnerLoadingDemoCode.vue';
+import MenuDemoCode from '@/pages/Menu/MenuDemoCode.vue';
 
 import '../css/styles.css'
 
 
- var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode]
+ var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode]
 
  const propsObj = defineProps({
     propsCode : {
