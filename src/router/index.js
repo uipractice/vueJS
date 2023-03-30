@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: '/cards',
       name: 'cards',
-      component: () => import('../pages/cards/CardsContainer.vue')
+      component: () => import('../pages/Cards/CardsContainer.vue')
     },
     {
       path: '/CircularProgress',
