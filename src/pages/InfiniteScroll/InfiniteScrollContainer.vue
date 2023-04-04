@@ -1,6 +1,6 @@
 <template>
    <div>
-     <wrapperOfAllComponents :propsCode="buttonCode" propsDemo="ButtonDemoCode"></wrapperOfAllComponents>
+     <wrapperOfAllComponents :propsCode="buttonCode" propsDemo="InfiniteScrollDemoCode"></wrapperOfAllComponents>
    </div>
 </template>
 
@@ -11,21 +11,18 @@ import { ref } from 'vue'
 
   var  buttonCode = ref('')
   buttonCode =`
-        <q-btn color="white" text-color="black" label="Standard" />
-        <q-btn color="primary" label="Primary" />
-        <q-btn color="secondary" label="Secondary" />
-        <q-btn color="amber" glossy label="Amber" />
-        <q-btn color="brown-5" label="Brown 5" />
-        <q-btn color="deep-orange" glossy label="Deep Orange" />
-        <q-btn color="purple" label="Purple" />
-        <q-btn color="black" label="Black" />
-        
+       
         <div class="q-pa-md q-gutter-sm">
-          <q-btn style="background: #FF0080; color: white" label="Fuchsia" />
-          <q-btn flat style="color: #FF0080" label="Fuchsia Flat" />
-          <q-btn style="background: goldenrod; color: white" label="Goldenrod" />
-          <q-btn outline style="color: goldenrod;" label="Goldenrod" />
-          <q-btn color="grey-4" text-color="purple" glossy unelevated icon="camera_enhance" label="Purple text" />
+          <q-infinite-scroll @load="onLoad" :offset="250">
+          <div v-for="(item, index) in items" :key="index" class="caption">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.</p>
+          </div>
+          <template v-slot:loading>
+            <div class="row justify-center q-my-md">
+              <q-spinner-dots color="primary" size="40px" />
+            </div>
+          </template>
+        </q-infinite-scroll>
         </div>
 
         <div class="q-pa-md q-gutter-sm">

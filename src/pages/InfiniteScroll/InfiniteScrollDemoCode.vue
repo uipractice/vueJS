@@ -1,41 +1,61 @@
 <template>
      <div class='demo-wrapper'>
-            <q-btn color="white" text-color="black" label="Standard" />
-            <q-btn color="primary" label="Primary" />
-            <q-btn color="secondary" label="Secondary" />
-            <q-btn color="amber" glossy label="Amber" />
-            <q-btn color="brown-5" label="Brown 5" />
-            <q-btn color="deep-orange" glossy label="Deep Orange" />
-            <q-btn color="purple" label="Purple" />
-            <q-btn color="black" label="Black" />
-      
-      <div class="q-pa-md q-gutter-sm">
-            <q-btn style="background: #FF0080; color: white" label="Fuchsia" />
-            <q-btn flat style="color: #FF0080" label="Fuchsia Flat" />
-            <q-btn style="background: goldenrod; color: white" label="Goldenrod" />
-            <q-btn outline style="color: goldenrod;" label="Goldenrod" />
-            <q-btn color="grey-4" text-color="purple" glossy unelevated icon="camera_enhance" label="Purple text" />
+      <button @click="reverseClick()">Reverse</button>
+      <div class="q-pa-md q-gutter-sm" style="min-height: 5vh;" v-if="!isReverse">
+            <h6>Infinite scroll</h6>
+            <div class="q-pa-md" style="height: 20vh;">
+            <q-infinite-scroll @load="onLoad" :offset="5">
+                  <div v-for="(item, index) in items" :key="index" class="caption">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.</p>
+                  </div>
+                  <template v-slot:loading>
+                  <div class="row justify-center q-my-md">
+                  <q-spinner-dots color="primary" size="40px" />
+                  </div>
+                  </template>
+            </q-infinite-scroll>
+            </div>
       </div>
 
-      <div class="q-pa-md q-gutter-sm">
-            <q-btn color="primary" icon="mail" label="On Left" />
-            <q-btn color="secondary" icon-right="mail" label="On Right" />
-            <q-btn color="red" icon="mail" icon-right="send" label="On Left and Right" />
-            <br>
-            <q-btn icon="phone" label="Stacked" stack glossy color="purple" />
+      <div class="q-pa-md q-gutter-sm" style="min-height: 5vh;" v-else>
+            <h6>Reverse Infinite scroll</h6>
+            <div class="q-pa-md" style="height: 20vh;">
+            <q-infinite-scroll @load="onLoad" reverse>
+                  <template v-slot:loading>
+                  <div class="row justify-center q-my-md">
+                  <q-spinner color="primary" name="dots" size="40px" />
+                  </div>
+                  </template>
+
+                  <div v-for="(item, index) in items" :key="index" class="caption q-py-sm">
+                  <q-badge class="shadow-1">
+                  {{ items.length - index }}
+                  </q-badge>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.
+                  </div>
+          </q-infinite-scroll>
       </div>
-      <div class="q-pa-md q-gutter-sm">
-            <q-btn round color="primary" icon="shopping_cart" />
-            <q-btn round color="secondary" icon="navigation" />
-            <q-btn round color="amber" glossy text-color="black" icon="layers_clear" />
-            <q-btn round color="brown-5" icon="directions" />
-            <q-btn round color="deep-orange" icon="edit_location" />
-            <q-btn round color="purple" glossy icon="local_grocery_store" />
-            <q-btn round color="black" icon="my_location" />
+
       </div>
     </div>
   </template>
 
   <script setup>
-//   import { ref } from 'vue'
+   import { ref } from 'vue'
+   const items = ref([ {}, {}, {}, {}, {}, {}, {} ])
+
+   var isReverse = ref(false)
+
+    function onLoad (index, done) {
+            setTimeout(() => {
+            items.value.push({}, {}, {}, {}, {}, {}, {})
+            done()
+            }, 2000)
+    }
+    function reverseClick(){
+      console.log("@@@ reverseClick",isReverse);
+      isReverse.value = true
+      console.log("@@@ reverseClick",isReverse);
+    }
+
   </script>

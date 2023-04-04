@@ -70,12 +70,14 @@ import TooltipDemoCode from '@/pages/Tooltip/TooltipDemoCode.vue';
 import TabsDemoCode from '@/pages/Tabs/TabsDemoCode.vue';
 import StepperDemoCode from '@/pages/Stepper/StepperDemoCode.vue';
 import TableDemoCode from '@/pages/Table/TableDemoCode.vue';
+import InfiniteScrollDemoCode from '@/pages/InfiniteScroll/InfiniteScrollDemoCode.vue';
+
 
 
 import '../css/styles.css'
 
 
- var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode,PaginationDemoCode,TooltipDemoCode,TabsDemoCode,StepperDemoCode,TableDemoCode]
+ var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode,PaginationDemoCode,TooltipDemoCode,TabsDemoCode,StepperDemoCode,TableDemoCode,InfiniteScrollDemoCode]
 
  const propsObj = defineProps({
     propsCode : {
