@@ -120,9 +120,9 @@ const router = createRouter({
       component: () => import('../pages/Tooltip/TooltipContainer.vue')
     },
     {
-      path: '/VirtualScroll',
-      name: 'VirtualScroll',
-      component: () => import('../pages/VirtualScroll/VirtualScrollContainer.vue')
+      path: '/InfiniteScroll',
+      name: 'InfiniteScroll',
+      component: () => import('../pages/InfiniteScroll/InfiniteScrollContainer.vue')
     },
     {
       path: '/Notify',

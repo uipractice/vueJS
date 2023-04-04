@@ -178,8 +178,8 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
                            "desc":"This is Tooltip component",
                           },
                           {
-                            "name":"VirtualScroll",
-                             "path":"/VirtualScroll",
+                            "name":"InfiniteScroll",
+                             "path":"/InfiniteScroll",
                              "logoSrc":buttonicon,
                              "hovLogo":hovButtonIcon,
                              "desc":"This is VirtualScroll component",
