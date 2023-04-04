@@ -1,18 +1,11 @@
 <template>
      <div class='demo-wrapper'>
-          
-      
       <div class="q-pa-md q-gutter-sm">
-            <div class="q-pa-md">
             <q-btn color="purple" @click="showNotif" label="Show Notification" />
-            </div>
-      
       </div>
 
       <div class="q-pa-md q-gutter-sm">
-            <div class="q-pa-md">
             <q-btn color="purple" @click="showNotif2" label="Show Notification With icon" />
-            </div>
       </div>
       <div class="q-pa-md q-gutter-sm">
             <q-btn color="purple" @click="showNotif3" label="Show Notifications" />
