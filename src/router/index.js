@@ -94,6 +94,45 @@ const router = createRouter({
       name: 'Menu',
       component: () => import('../pages/Menu/MenuContainer.vue')
     },
+    {
+      path: '/Pagination',
+      name: 'Pagination',
+      component: () => import('../pages/Pagination/PaginationContainer.vue')
+    },
+    {
+      path: '/Stepper',
+      name: 'Stepper',
+      component: () => import('../pages/Stepper/StepperContainer.vue')
+    },
+    {
+      path: '/Table',
+      name: 'Table',
+      component: () => import('../pages/Table/TableContainer.vue')
+    },
+    {
+      path: '/Tabs',
+      name: 'Tabs',
+      component: () => import('../pages/Tabs/TabsContainer.vue')
+    },
+    {
+      path: '/Tooltip',
+      name: 'Tooltip',
+      component: () => import('../pages/Tooltip/TooltipContainer.vue')
+    },
+    {
+      path: '/VirtualScroll',
+      name: 'VirtualScroll',
+      component: () => import('../pages/VirtualScroll/VirtualScrollContainer.vue')
+    },
+    {
+      path: '/Notify',
+      name: 'Notify',
+      component: () => import('../pages/Notify/NotifyContainer.vue')
+    }
+    
+    
+   
+    
     
     
 
