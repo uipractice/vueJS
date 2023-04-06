@@ -107,4 +107,21 @@
   var model = ref(null)
  var files = ref(null)
  var file = ref(null)
+
+     var filesImages    =ref(null)
+     var  filesMaxSize  = ref(null)
+     var  filesMaxNumber = ref(null)
+
+   function   onRejected (rejectedEntries) {
+        // Notify plugin needs to be installed
+        // https://quasar.dev/quasar-plugins/notify#Installation
+        $q.notify({
+          type: 'negative',
+          message: `${rejectedEntries.length} file(s) did not pass validation constraints`
+        })
+      }
+
+ function checkFileSize (files) {
+        return files.filter(file => file.size < 2048)
+      }
   </script>

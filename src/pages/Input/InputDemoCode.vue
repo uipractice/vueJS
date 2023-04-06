@@ -152,7 +152,7 @@
   hint="Mask: $ #,###.00 #"
 >
   <template v-slot:control="{ id, floatingLabel, modelValue, emitValue }">
-    <input :id="id" class="q-field__input text-right" :value="modelValue" @change="e => emitValue(e.target.value)" v-money="moneyFormatForDirective" v-show="floatingLabel">
+    <input :id="id" class="q-field__input text-right" :value="modelValue" @change="e => emitValue(e.target.value)"  v-show="floatingLabel">
   </template>
 </q-field>
       </div>
@@ -172,7 +172,9 @@
        var     date= ref('')
 
        var     price= ref(0)
-
+      var phone = ref('')
+      var card = ref('')
+      
        const inputRef = ref(null)
        var model = ref('')
 

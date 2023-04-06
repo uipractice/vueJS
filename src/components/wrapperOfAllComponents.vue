@@ -65,11 +65,20 @@ import ToggleDemoCode from '@/pages/Toggle/ToggleDemoCode.vue';
 import QdateDemoCode from '@/pages/Qdate/QdateDemoCode.vue';
 import InnerLoadingDemoCode from '@/pages/InnerLoading/InnerLoadingDemoCode.vue';
 import MenuDemoCode from '@/pages/Menu/MenuDemoCode.vue';
+import PaginationDemoCode from '@/pages/Pagination/PaginationDemoCode.vue';
+import TooltipDemoCode from '@/pages/Tooltip/TooltipDemoCode.vue';
+import TabsDemoCode from '@/pages/Tabs/TabsDemoCode.vue';
+import StepperDemoCode from '@/pages/Stepper/StepperDemoCode.vue';
+import TableDemoCode from '@/pages/Table/TableDemoCode.vue';
+import InfiniteScrollDemoCode from '@/pages/InfiniteScroll/InfiniteScrollDemoCode.vue';
+import NotifyDemoCode from '@/pages/Notify/NotifyDemoCode.vue';
+
+
 
 import '../css/styles.css'
 
 
- var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode]
+ var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode,PaginationDemoCode,TooltipDemoCode,TabsDemoCode,StepperDemoCode,TableDemoCode,InfiniteScrollDemoCode,NotifyDemoCode]
 
  const propsObj = defineProps({
     propsCode : {

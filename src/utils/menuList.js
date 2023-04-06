@@ -143,33 +143,55 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
       label: 'Utility Component',
       listOfSubCom:[
                    {
-                    "name":"button",
-                     "path":"/button",
+                    "name":"Pagination",
+                     "path":"/Pagination",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon,
-                     "desc":"This is button component",
+                     "desc":"This is Pagination component",
                    },
                    {
-                    "name":"button",
-                     "path":"/button",
+                    "name":"Stepper",
+                     "path":"/Stepper",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon,
-                     "desc":"This is button component",
+                     "desc":"This is Stepper component",
                     },
                     {
-                      "name":"button",
-                       "path":"/button",
+                      "name":"Table",
+                       "path":"/Table",
                        "logoSrc":buttonicon,
                        "hovLogo":hovButtonIcon,
-                       "desc":"This is button component",
+                       "desc":"This is Table component",
                       },
                       {
-                        "name":"button",
-                         "path":"/button",
+                        "name":"Tabs",
+                         "path":"/Tabs",
                          "logoSrc":buttonicon,
                          "hovLogo":hovButtonIcon,
-                         "desc":"This is button component",
-                        }
+                         "desc":"This is Tabs component",
+                        },
+                        {
+                          "name":"Tooltip",
+                           "path":"/Tooltip",
+                           "logoSrc":buttonicon,
+                           "hovLogo":hovButtonIcon,
+                           "desc":"This is Tooltip component",
+                          },
+                          {
+                            "name":"InfiniteScroll",
+                             "path":"/InfiniteScroll",
+                             "logoSrc":buttonicon,
+                             "hovLogo":hovButtonIcon,
+                             "desc":"This is VirtualScroll component",
+                            },
+                            {
+                              "name":"Notify",
+                               "path":"/Notify",
+                               "logoSrc":buttonicon,
+                               "hovLogo":hovButtonIcon,
+                               "desc":"This is Notify component",
+                              }
+                        
                   ]
     }
   ])
