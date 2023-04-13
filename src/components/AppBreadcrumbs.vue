@@ -8,7 +8,7 @@ import {  RouterView } from 'vue-router'
 <template>
      <div class='app-breadcrumbs'>
        
-    <q-breadcrumbs >
+    <q-breadcrumbs>
       <template v-slot:separator>
         <q-icon
           size="16px"

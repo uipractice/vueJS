@@ -105,11 +105,6 @@ const router = createRouter({
       component: () => import('../pages/Stepper/StepperContainer.vue')
     },
     {
-      path: '/Table',
-      name: 'Table',
-      component: () => import('../pages/Table/TableContainer.vue')
-    },
-    {
       path: '/Tabs',
       name: 'Tabs',
       component: () => import('../pages/Tabs/TabsContainer.vue')
@@ -128,6 +123,26 @@ const router = createRouter({
       path: '/Notify',
       name: 'Notify',
       component: () => import('../pages/Notify/NotifyContainer.vue')
+    },
+    {
+      path: '/Table',
+      name: 'Table',
+      component: () => import('../pages/Table/TableContainer.vue')
+    },
+    {
+      path: '/ServerSideTable',
+      name: 'ServerSideTable',
+      component: () => import('../pages/Table/ServerSideTableContainer.vue')
+    },
+    {
+      path: '/PopupEditingTable',
+      name: 'PopupEditingTable',
+      component: () => import('../pages/Table/PopupEditingTableContainer.vue')
+    },
+    {
+      path: '/ExportToCSVTable',
+      name: 'ExportToCSVTable',
+      component: () => import('../pages/Table/ExportToCSVTableContainer.vue')
     }
     
     
