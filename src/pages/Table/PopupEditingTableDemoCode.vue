@@ -1,13 +1,17 @@
 <template>
      <div class='demo-wrapper'>
       <div class="q-pa-md q-gutter-sm">
+        <div v-if="columnsCommentsLoading">
+              Loading...
+        </div>
             <q-table
             flat bordered
             title="Treats"
-            :rows="rows"
-            :columns="columns"
+            :rows="resComments.data"
+            :columns="columnsComments"
             row-key="name"
             binary-state-sort
+            v-else
       >
       <template v-slot:body="props">
         <q-tr :props="props">
@@ -17,28 +21,20 @@
               <q-input v-model="scope.value" dense autofocus counter @keyup.enter="scope.set" />
             </q-popup-edit>
           </q-td>
-          <q-td key="calories" :props="props">
-            {{ props.row.calories }}
-            <q-popup-edit v-model="props.row.calories" title="Update calories" buttons v-slot="scope">
-              <q-input type="number" v-model="scope.value" dense autofocus />
+          <q-td key="email" :props="props">
+            {{ props.row.email }}
+            <q-popup-edit v-model="props.row.email" title="Update Email" buttons v-slot="scope">
+              <q-input type="text" v-model="scope.value" dense autofocus />
             </q-popup-edit>
           </q-td>
-          <q-td key="fat" :props="props">
-            <div class="text-pre-wrap">{{ props.row.fat }}</div>
-            <q-popup-edit v-model="props.row.fat" v-slot="scope">
+          <q-td key="body" :props="props">
+            <div class="text-pre-wrap">{{ props.row.body }}</div>
+            <q-popup-edit v-model="props.row.body" v-slot="scope" title="Update Body" buttons>
               <q-input type="textarea" v-model="scope.value" dense autofocus />
             </q-popup-edit>
           </q-td>
-          <q-td key="carbs" :props="props">
-            {{ props.row.carbs }}
-            <q-popup-edit v-model="props.row.carbs" title="Update carbs" buttons persistent v-slot="scope">
-              <q-input type="number" v-model="scope.value" dense autofocus hint="Use buttons to close" />
-            </q-popup-edit>
-          </q-td>
-          <q-td key="protein" :props="props">{{ props.row.protein }}</q-td>
-          <q-td key="sodium" :props="props">{{ props.row.sodium }}</q-td>
-          <q-td key="calcium" :props="props">{{ props.row.calcium }}</q-td>
-          <q-td key="iron" :props="props">{{ props.row.iron }}</q-td>
+        
+         
         </q-tr>
       </template>
     </q-table>
@@ -49,126 +45,38 @@
 <script setup>
  import { ref } from 'vue'
 
-const columns = [
-  {
+
+ import axios from 'axios';
+    var resComments = ref('')
+    var columnsCommentsLoading = ref('false')
+    
+    columnsCommentsLoading.value = true;
+    axios.get('https://jsonplaceholder.typicode.com/comments')
+    .then(function (response) {
+    
+    // handle success
+    columnsCommentsLoading.value = false
+    console.log("@@resComments",response);
+    resComments.value = response
+    console.log("@@resComments",resComments);
+
+    })
+    .catch(function (error) {
+    // handle error
+        console.log(error);
+  })
+
+const columnsComments = [{
     name: 'name',
     required: true,
-    label: 'Dessert (100g serving)',
+    label: 'Name',
     align: 'left',
     field: row => row.name,
-    format: val => `${val}`,
     sortable: true
   },
-  { name: 'calories', align: 'center', label: 'Calories', field: 'calories', sortable: true },
-  { name: 'fat', label: 'Fat (g)', field: 'fat', sortable: true, style: 'width: 10px' },
-  { name: 'carbs', label: 'Carbs (g)', field: 'carbs' },
-  { name: 'protein', label: 'Protein (g)', field: 'protein' },
-  { name: 'sodium', label: 'Sodium (mg)', field: 'sodium' },
-  { name: 'calcium', label: 'Calcium (%)', field: 'calcium', sortable: true, sort: (a, b) => parseInt(a, 10) - parseInt(b, 10) },
-  { name: 'iron', label: 'Iron (%)', field: 'iron', sortable: true, sort: (a, b) => parseInt(a, 10) - parseInt(b, 10) }
+  { name: 'email', align: 'center', label: 'Email', field: 'email', sortable: true },
+  { name: 'body', label: 'body', field: 'body', sortable: true },
+ 
 ]
 
-const rowsCo = [
-  {
-    name: 'Frozen Yogurt',
-    calories: 159,
-    fat: 6.0,
-    carbs: 24,
-    protein: 4.0,
-    sodium: 87,
-    calcium: '14%',
-    iron: '1%'
-  },
-  {
-    name: 'Ice cream sandwich',
-    calories: 237,
-    fat: 9.0,
-    carbs: 37,
-    protein: 4.3,
-    sodium: 129,
-    calcium: '8%',
-    iron: '1%'
-  },
-  {
-    name: 'Eclair',
-    calories: 262,
-    fat: 16.0,
-    carbs: 23,
-    protein: 6.0,
-    sodium: 337,
-    calcium: '6%',
-    iron: '7%'
-  },
-  {
-    name: 'Cupcake',
-    calories: 305,
-    fat: 3.7,
-    carbs: 67,
-    protein: 4.3,
-    sodium: 413,
-    calcium: '3%',
-    iron: '8%'
-  },
-  {
-    name: 'Gingerbread',
-    calories: 356,
-    fat: 16.0,
-    carbs: 49,
-    protein: 3.9,
-    sodium: 327,
-    calcium: '7%',
-    iron: '16%'
-  },
-  {
-    name: 'Jelly bean',
-    calories: 375,
-    fat: 0.0,
-    carbs: 94,
-    protein: 0.0,
-    sodium: 50,
-    calcium: '0%',
-    iron: '0%'
-  },
-  {
-    name: 'Lollipop',
-    calories: 392,
-    fat: 0.2,
-    carbs: 98,
-    protein: 0,
-    sodium: 38,
-    calcium: '0%',
-    iron: '2%'
-  },
-  {
-    name: 'Honeycomb',
-    calories: 408,
-    fat: 3.2,
-    carbs: 87,
-    protein: 6.5,
-    sodium: 562,
-    calcium: '0%',
-    iron: '45%'
-  },
-  {
-    name: 'Donut',
-    calories: 452,
-    fat: 25.0,
-    carbs: 51,
-    protein: 4.9,
-    sodium: 326,
-    calcium: '2%',
-    iron: '22%'
-  },
-  {
-    name: 'KitKat',
-    calories: 518,
-    fat: 26.0,
-    carbs: 65,
-    protein: 7,
-    sodium: 54,
-    calcium: '12%',
-    iron: '6%'
-  }
-]
-var rows = ref(rowsCo)
 </script>

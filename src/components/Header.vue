@@ -13,12 +13,12 @@ import Evoke_logo from '../images/Evoke_logo.png';
           class="imgStyle"
         />
       </a>
-      <ul id="navb" class="app-nav-margin navbar-nav my-2 my-md-0 ulLocalClass">
+      <ul id="navb" class="app-nav-margin navbar-nav my-0 mt-0 my-md-0 ulLocalClass">
         <li class="nav-item">
           <a href="http://angular-components.evokeapps.com/"><img src="../images/icons-03.svg" alt="" />Angular Components</a>
         </li>
         <li class="nav-item">
-          <a href="/" style="padding: 10px 3px 10px 3px;"><img src="../images/icons-02.svg" alt="" />React Components</a>
+          <a href="/" ><img src="../images/icons-02.svg" alt="" />React Components</a>
         </li>
         <li class="nav-item">
           <a href="http://ui-components.evokeapps.com/" ><img src="../images/icons-01.svg" alt="" />UI Components</a>
