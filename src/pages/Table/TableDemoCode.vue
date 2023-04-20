@@ -26,6 +26,25 @@
             />
       </div>
 
+     
+      <div class="q-pa-md q-gutter-sm">
+            <h6>selection table</h6>
+            <q-table
+                  flat bordered
+                  title="Treats"
+                  :rows="resComments.data"
+                  :columns="columnsComments"
+                  row-key="name"
+                  :selected-rows-label="getSelectedString"
+                  selection="multiple"
+                  :loading="columnsCommentsLoading"
+                  v-model:selected="selected"
+            />
+
+            <div class="q-mt-md">
+                  Selected: {{ JSON.stringify(selected) }}
+            </div>
+      </div>
       <div class="q-pa-md q-gutter-sm">
             <h6>virtual scroll</h6>
             <div id="q-app" style="min-height: 100vh;">
@@ -46,24 +65,6 @@
              </div>
              </div>     
       </div>
-      <div class="q-pa-md q-gutter-sm">
-            <h6>selection table</h6>
-            <q-table
-                  flat bordered
-                  title="Treats"
-                  :rows="resComments.data"
-                  :columns="columnsComments"
-                  row-key="name"
-                  :selected-rows-label="getSelectedString"
-                  selection="multiple"
-                  :loading="columnsCommentsLoading"
-                  v-model:selected="selected"
-            />
-
-            <div class="q-mt-md">
-                  Selected: {{ JSON.stringify(selected) }}
-            </div>
-      </div>
     </div>
   </template>
 
@@ -82,7 +83,7 @@
     columnsUsersLoading.value = false
     console.log("@@resUsers",response);
     resUsers.value = response
-    console.log("@@resUsers",resUsers);
+    console.log("@@resUsers 2",resUsers.value);
 
     })
     .catch(function (error) {

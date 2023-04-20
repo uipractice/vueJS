@@ -1,8 +1,9 @@
 
 <script setup>
-// import ref from 'vue'
+
+// import { ref } from 'vue'
 import './AppBreadcrumbs.scss';
-import {  RouterView } from 'vue-router'
+import router from "@/router";
 
 </script>
 <template>
@@ -20,10 +21,8 @@ import {  RouterView } from 'vue-router'
       <q-breadcrumbs-el label="Home"  to="/"  class="paddingTop" />
 
       <q-breadcrumbs-el label="Vuejs" to="/" class="paddingTop" />
-      <q-breadcrumbs-el label="Button" to="/" class="paddingTop" />
-     
+      <q-breadcrumbs-el :label="router.currentRoute.value.name" :to="router.currentRoute.value.name" class="paddingTop" />
     </q-breadcrumbs>
-
     </div>
 </template>
 <style>

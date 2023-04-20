@@ -1,6 +1,6 @@
 <template>
    <div>
-     <wrapperOfAllComponents :propsCode="buttonCode" propsDemo="ButtonDemoCode"></wrapperOfAllComponents>
+     <wrapperOfAllComponents :propsCode="buttonCode" propsDemo="ServerSideTableDemoCode"></wrapperOfAllComponents>
    </div>
 </template>
 
