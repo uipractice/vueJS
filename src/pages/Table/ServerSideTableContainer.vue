@@ -11,41 +11,136 @@ import { ref } from 'vue'
 
   var  buttonCode = ref('')
   buttonCode =`
-  ServerSideTableContainer
-        <q-btn color="white" text-color="black" label="Standard" />
-        <q-btn color="primary" label="Primary" />
-        <q-btn color="secondary" label="Secondary" />
-        <q-btn color="amber" glossy label="Amber" />
-        <q-btn color="brown-5" label="Brown 5" />
-        <q-btn color="deep-orange" glossy label="Deep Orange" />
-        <q-btn color="purple" label="Purple" />
-        <q-btn color="black" label="Black" />
-        
-        <div class="q-pa-md q-gutter-sm">
-          <q-btn style="background: #FF0080; color: white" label="Fuchsia" />
-          <q-btn flat style="color: #FF0080" label="Fuchsia Flat" />
-          <q-btn style="background: goldenrod; color: white" label="Goldenrod" />
-          <q-btn outline style="color: goldenrod;" label="Goldenrod" />
-          <q-btn color="grey-4" text-color="purple" glossy unelevated icon="camera_enhance" label="Purple text" />
-        </div>
+  <template>
+  <div class='demo-wrapper'>
+   <div class="q-pa-md q-gutter-sm">
+     <div v-if="columnsCommentsLoading">
+           Loading...
+     </div>
+      <q-table
+      v-else
+         flat bordered
+         title="Treats"
+         :rows="filteredData.length != 0?filteredData: resComments"
+         :columns="columnsComments"
+         row-key="name"
+         binary-state-sort
+         v-model:pagination="pagination"
+         @request="handleRequest"
+        :filter="searchText"
+        :filter-method="handleFilter"
+        >
+        <template v-slot:top-right>
+            <q-input v-model="searchText" borderless dense debounce="300"  placeholder="Search"></q-input>
+           
+        </template>
+      </q-table>
+   </div>
+ </div>
+</template>
 
-        <div class="q-pa-md q-gutter-sm">
-          <q-btn color="primary" icon="mail" label="On Left" />
-          <q-btn color="secondary" icon-right="mail" label="On Right" />
-          <q-btn color="red" icon="mail" icon-right="send" label="On Left and Right" />
-          <br>
-          <q-btn icon="phone" label="Stacked" stack glossy color="purple" />
-        </div>
 
-        <div class="q-pa-md q-gutter-sm">
-          <q-btn round color="primary" icon="shopping_cart" />
-          <q-btn round color="secondary" icon="navigation" />
-          <q-btn round color="amber" glossy text-color="black" icon="layers_clear" />
-          <q-btn round color="brown-5" icon="directions" />
-          <q-btn round color="deep-orange" icon="edit_location" />
-          <q-btn round color="purple" glossy icon="local_grocery_store" />
-          <q-btn round color="black" icon="my_location" />
-        </div>
+import { ref } from 'vue'
+
+
+import axios from 'axios';
+ var resComments = ref('')
+ var columnsCommentsLoading = ref('false')
+ 
+var pagination = ref({})
+var searchText= ref("")
+var orignalRows=ref('')
+
+
+pagination = ref({
+      page: 1,
+      rowsPerPage: 6,
+      rowsNumber :0
+    })
+
+  function handleFilter(props){
+    console.log("@@ handle filter",props);
+  }
+
+const  fetchProduct = (page = 0) =>{
+  console.log("calling fetch product");
+  columnsCommentsLoading.value = true;
+  axios.get('https://reqres.in/api/products?page={page}')
+ .then(function (response) {
+ 
+ // handle success
+ columnsCommentsLoading.value = false
+ console.log("@@resComments",response);
+ resComments.value = response.data.data;
+ console.log("@@resComments",resComments);
+ orignalRows.value = response.data.data;
+ pagination.value.page = response.data.page
+ pagination.value.rowsPerPage = response.data.per_page
+ pagination.value.rowsNumber = response.data.total
+
+ })
+ .catch(function (error) {
+ // handle error
+     console.log(error);
+})
+}
+function filterMethoadByName(res){
+ 
+    console.log("res of map",res,typeof res,res.name);
+    
+    var resName = res.name
+console.log("searchText",searchText);
+      if(resName.includes(searchText.value)){
+        console.log("res.name.includes(res)",res.name.includes(res));
+        return res
+      }
+    
+}
+var filteredData = ref('')
+function getFilterData(filter){
+  console.log("......calling get filter data");
+  console.log("filter",filter);
+  console.log("orignalRows",orignalRows,typeof orignalRows);
+   var filterData=  orignalRows.value.filter(filterMethoadByName)
+   resComments.value = []
+   console.log("calling rescomments",resComments.value);
+   for(var i=0;i<filterData.length;i++){
+       resComments.value.push(filterData[i])
+   }
+   resComments.value = filterData;
+   console.log("filterData",filterData);
+   filteredData.value = filterData
+   console.log("resComments",resComments.value);
+}
+
+function handleRequest(props){
+  console.log("......calling handle request");
+  console.log("props filter",props);
+    if(props.filter.length == 0){
+        resComments.value = orignalRows.value
+        filteredData.value = []
+    }
+    fetchProduct(props.pagination.page)
+    if(props.filter){
+      getFilterData(props.filter)
+    }
+}
+
+fetchProduct()
+const columnsComments = [{
+ name: 'name',
+ required: true,
+ label: 'Name',
+ align: 'left',
+ field: row => row.name,
+ sortable: true
+},
+{ name: 'year', align: 'center', label: 'year', field: 'year', sortable: true },
+{ name: 'color', align: 'center', label: 'color', field: 'color', sortable: true }
+
+]
+
+
         `
 </script>
 <style>
