@@ -72,13 +72,14 @@ import StepperDemoCode from '@/pages/Stepper/StepperDemoCode.vue';
 import TableDemoCode from '@/pages/Table/TableDemoCode.vue';
 import InfiniteScrollDemoCode from '@/pages/InfiniteScroll/InfiniteScrollDemoCode.vue';
 import NotifyDemoCode from '@/pages/Notify/NotifyDemoCode.vue';
-
-
+import PopupEditingTableDemoCode from '@/pages/Table/PopupEditingTableDemoCode.vue';
+import ServerSideTableDemoCode from '@/pages/Table/ServerSideTableDemoCode.vue';
+import ExportToCSVTableDemoCode from '@/pages/Table/ExportToCSVTableDemoCode.vue';
 
 import '../css/styles.css'
 
 
- var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode,PaginationDemoCode,TooltipDemoCode,TabsDemoCode,StepperDemoCode,TableDemoCode,InfiniteScrollDemoCode,NotifyDemoCode]
+ var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode,PaginationDemoCode,TooltipDemoCode,TabsDemoCode,StepperDemoCode,TableDemoCode,InfiniteScrollDemoCode,NotifyDemoCode,PopupEditingTableDemoCode,ServerSideTableDemoCode,ExportToCSVTableDemoCode]
 
  const propsObj = defineProps({
     propsCode : {

@@ -2,11 +2,15 @@
      <div class='demo-wrapper'>
            <div class="q-pa-md q-gutter-sm">
             <h6>Basic</h6>
+            <div v-if="columnsUsersLoading">
+              Loading...
+            </div>
             <q-table
                   title="Treats"
-                  :rows="rows"
-                  :columns="columns"
+                  :rows="resUsers.data"
+                  :columns="columnsUsers"
                   row-key="name"
+                  v-else
             />
            </div>
       
@@ -22,6 +26,25 @@
             />
       </div>
 
+     
+      <div class="q-pa-md q-gutter-sm">
+            <h6>selection table</h6>
+            <q-table
+                  flat bordered
+                  title="Treats"
+                  :rows="resComments.data"
+                  :columns="columnsComments"
+                  row-key="name"
+                  :selected-rows-label="getSelectedString"
+                  selection="multiple"
+                  :loading="columnsCommentsLoading"
+                  v-model:selected="selected"
+            />
+
+            <div class="q-mt-md">
+                  Selected: {{ JSON.stringify(selected) }}
+            </div>
+      </div>
       <div class="q-pa-md q-gutter-sm">
             <h6>virtual scroll</h6>
             <div id="q-app" style="min-height: 100vh;">
@@ -42,42 +65,31 @@
              </div>
              </div>     
       </div>
-      <div class="q-pa-md q-gutter-sm">
-            <h6>custom sorting</h6>
-            <q-table
-                  flat bordered
-                  title="Treats"
-                  :rows="rows"
-                  :columns="columns"
-                  row-key="name"
-                  :sort-method="customSort"
-                  binary-state-sort
-            />
-      </div>
-      <div class="q-pa-md q-gutter-sm">
-            <h6>selection table</h6>
-            <q-table
-                  flat bordered
-                  title="Treats"
-                  :rows="rows"
-                  :columns="columns"
-                  row-key="name"
-                  :selected-rows-label="getSelectedString"
-                  selection="multiple"
-                  v-model:selected="selected"
-            />
-
-            <div class="q-mt-md">
-                  Selected: {{ JSON.stringify(selected) }}
-            </div>
-      </div>
     </div>
   </template>
 
   <script setup>
    import { ref } from 'vue'
 
+   import axios from 'axios';
+    var resUsers = ref('')
+    var columnsUsersLoading = ref('false')
+    
+    columnsUsersLoading.value = true;
+    axios.get('https://jsonplaceholder.typicode.com/users')
+    .then(function (response) {
+    
+    // handle success
+    columnsUsersLoading.value = false
+    console.log("@@resUsers",response);
+    resUsers.value = response
+    console.log("@@resUsers 2",resUsers.value);
 
+    })
+    .catch(function (error) {
+    // handle error
+        console.log(error);
+  })
 //rows and columns are same for every table
    let  rows = [
   {
@@ -187,7 +199,6 @@ const columns = [{
     label: 'Dessert (100g serving)',
     align: 'left',
     field: row => row.name,
-    format: val => `${val}`,
     sortable: true
   },
   { name: 'calories', align: 'center', label: 'Calories', field: 'calories', sortable: true },
@@ -199,11 +210,79 @@ const columns = [{
   { name: 'iron', label: 'Iron (%)', field: 'iron', sortable: true, sort: (a, b) => parseInt(a, 10) - parseInt(b, 10) }
 ]
 
+const columnsUsers = [{
+    name: 'name',
+    required: true,
+    label: 'Name',
+    align: 'left',
+    field: row => row.name,
+    sortable: true
+  },
+  { name: 'email', align: 'center', label: 'Email', field: 'email', sortable: true },
+  { name: 'phone', label: 'Phone', field: 'phone', sortable: true },
+  { name: 'website', label: 'Website', field: 'website' },
+  { name: 'company', label: 'Company', field: row=>row.company.name },
+  { name: 'address', label: 'Address', field: row=>row.address.city }
+]
+   var resComments = ref('')
+   var columnsCommentsLoading = ref('false')
+   
+   columnsCommentsLoading.value = true;
+   axios.get('https://jsonplaceholder.typicode.com/comments')
+   .then(function (response) {
+   
+   // handle success
+   columnsCommentsLoading.value = false
+   console.log("@@resComments",response);
+   resComments.value = response
+   console.log("@@resComments",resComments);
+
+   })
+   .catch(function (error) {
+   // handle error
+       console.log(error);
+ })
+
+ 
+
+const columnsComments = [{
+   name: 'name',
+   required: true,
+   label: 'Name',
+   align: 'left',
+   field: row => row.name,
+   sortable: true
+ },
+ { name: 'email', align: 'center', label: 'Email', field: 'email', sortable: true },
+ { name: 'body', label: 'body', field: 'body', sortable: true },
+
+]
+function customSort (rows, sortBy, descending) {
+        const data = [...rows]
+
+        if (sortBy) {
+          data.sort((a, b) => {
+            const x = descending ? b : a
+            const y = descending ? a : b
+
+            if (sortBy === 'name') {
+              // string sort
+              return x[ sortBy ] > y[ sortBy ] ? 1 : x[ sortBy ] < y[ sortBy ] ? -1 : 0
+            }
+            else {
+              // numeric sort
+              return parseFloat(x[ sortBy ]) - parseFloat(y[ sortBy ])
+            }
+          })
+        }
+
+        return data
+      }
 
    //this is for selection table
    const selected = ref([])
   function getSelectedString () {
-        return selected.value.length === 0 ? '' : `${selected.value.length} record${selected.value.length > 1 ? 's' : ''} selected of ${rows.length}`
+        return selected.value.length === 0 ? '' : `${selected.value.length} record${selected.value.length > 1 ? 's' : ''} selected of ${resComments.value.data.length}`
       }
 
      //this for virtual scroll table 

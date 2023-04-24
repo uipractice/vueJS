@@ -156,13 +156,6 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
                      "hovLogo":hovButtonIcon,
                      "desc":"This is Stepper component",
                     },
-                    {
-                      "name":"Table",
-                       "path":"/Table",
-                       "logoSrc":buttonicon,
-                       "hovLogo":hovButtonIcon,
-                       "desc":"This is Table component",
-                      },
                       {
                         "name":"Tabs",
                          "path":"/Tabs",
@@ -193,6 +186,39 @@ import hovButtonIcon from '@/images/hovButtonIcon.svg';
                               }
                         
                   ]
-    }
+    },
+    {
+      
+      label: 'Table Component',
+      listOfSubCom:[
+        {
+          "name":"Table",
+           "path":"/Table",
+           "logoSrc":buttonicon,
+           "hovLogo":hovButtonIcon,
+           "desc":"This is Table component",
+          },
+          {
+            "name":"ServerSideTable",
+             "path":"/ServerSideTable",
+             "logoSrc":buttonicon,
+             "hovLogo":hovButtonIcon,
+             "desc":"This is ServerSide Table component",
+            },
+            {
+              "name":"PopupEditingTable",
+               "path":"/PopupEditingTable",
+               "logoSrc":buttonicon,
+               "hovLogo":hovButtonIcon,
+               "desc":"This is PopupEditing Table component",
+              },
+              {
+                "name":"ExportToCSVTable",
+                 "path":"/ExportToCSVTable",
+                 "logoSrc":buttonicon,
+                 "hovLogo":hovButtonIcon,
+                 "desc":"This is ExportToCSV Table component",
+                },
+      ]}
   ])
 
