@@ -12,19 +12,16 @@
           <q-list>
 
             <template v-for="(menuItem, index) in menuListLocal" :key="index">
-              <q-item  v-ripple>
-                
+              <q-item>
                 <q-item-section>
                   <section>
                     <details class="details" >
                       <summary class="summary">{{ menuItem.label }}</summary>
                       <details class="details">
-                       
                         <summary class="summary summary1">
                           <p v-for="(menuSubItem, index) in menuItem.listOfSubCom" :key="index">
                             <RouterLink :to="menuSubItem.path">{{ menuSubItem.name }}</RouterLink>
                           </p>
-                         
                         </summary>
                       </details>
                     </details>
