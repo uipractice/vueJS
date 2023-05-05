@@ -1,6 +1,9 @@
 <template>
     <div class="componentWrapper">
-     <h3 class='btn-title'>{{ router.currentRoute.value.name?  router.currentRoute.value.name:'component' }}</h3>
+     <h5 class='btn-title' style="margin: 10px 0 20px;
+    font-weight: 700;
+    text-align: left;
+    font-size: 18px;">{{ router.currentRoute.value.name?  router.currentRoute.value.name:'component' }}</h5>
       <div class="step-tabs-wrapper">
         <q-tabs
         v-model="tab"
