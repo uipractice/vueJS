@@ -8,7 +8,7 @@
       v-else
          flat bordered
          title="Treats"
-         :rows="filteredData.length != 0?filteredData: resComments"
+         :rows="resComments"
          :columns="columnsComments"
          row-key="name"
          binary-state-sort
@@ -107,9 +107,11 @@ function handleRequest(props){
         resComments.value = orignalRows.value
         filteredData.value = []
     }
-    fetchProduct(props.pagination.page)
+  
     if(props.filter){
       getFilterData(props.filter)
+    }else{
+      fetchProduct(props.pagination.page)
     }
 }
 
