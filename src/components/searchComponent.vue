@@ -3,10 +3,10 @@
           v-model="model"
           use-input
           input-debounce="0"
-          label="Search by select options from dropdown"
+          label="Search"
           :options="options"
           @filter="filterFn"
-          style="width: 340px"
+          style="width: 290px"
           behavior="menu"
         >
           <template v-slot:no-option>
