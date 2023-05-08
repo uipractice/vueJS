@@ -3,10 +3,10 @@
           v-model="model"
           use-input
           input-debounce="0"
-          label="Search"
+          label="Search by select options from dropdown"
           :options="options"
           @filter="filterFn"
-          style="width: 250px"
+          style="width: 340px"
           behavior="menu"
         >
           <template v-slot:no-option>
@@ -23,13 +23,12 @@
   </template>
   
   <script>
-  import { ref } from 'vue'
+  import { ref ,watch} from 'vue'
   import { menuList } from '../utils/menuList';
   import router from "@/router";
   var stringOptions = []
 for(var i=0;i<menuList.value.length;i++){
   for(var j=0;j<menuList.value[i].listOfSubCom.length;j++){
-     console.log("path" , menuList.value[i].listOfSubCom[j].name);
      stringOptions.push(menuList.value[i].listOfSubCom[j].name);
   }
 }
@@ -39,14 +38,23 @@ for(var i=0;i<menuList.value.length;i++){
       var options = ref([])
       options.value = stringOptions
       var model = ref("")
+
+      watch(model,(curVal)=>{
+        console.log("curVal",curVal);
+        if(curVal == null){
+          router.push({ path: '/', replace: true })
+        }else{
+        router.push({ path: '/'+curVal, replace: true })
+      }
+      })
+
+
       return {
         model,
         stringOptions,
         options,
   
         filterFn (val, update) {
-            console.log("val",val);
-            console.log("model",model.value);
          if(model.value){
             router.push({ path: '/'+model.value, replace: true })
          }

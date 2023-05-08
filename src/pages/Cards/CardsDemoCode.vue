@@ -252,10 +252,11 @@
     </div>
   </template>
 <script setup>
+ import { ref } from 'vue'
 
 var lorem = "nice"
 
-
+var stars = ref(3)
 </script>
 <style lang="scss" scoped>
 
