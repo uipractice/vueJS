@@ -55,9 +55,9 @@ for(var i=0;i<menuList.value.length;i++){
         options,
   
         filterFn (val, update) {
-         if(model.value){
-            router.push({ path: '/'+model.value, replace: true })
-         }
+        //  if(model.value){
+        //     router.push({ path: '/'+model.value, replace: true })
+        //  }
 
           if (val === '') {
             update(() => {

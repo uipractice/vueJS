@@ -13,7 +13,8 @@
       <q-breadcrumbs-el label="Home"  to="/"  class="paddingTop" />
 
       <q-breadcrumbs-el label="Vuejs" to="/" class="paddingTop" />
-      <q-breadcrumbs-el :label="router.currentRoute.value.name" :to="router.currentRoute.value.name" class="paddingTop" />
+      <q-breadcrumbs-el v-if="router.currentRoute.value.name != 'home'" :label="router.currentRoute.value.name" :to="router.currentRoute.value.name" class="paddingTop" />
+      <q-breadcrumbs-el v-else :label="router.currentRoute.value.name" :to="'/'" class="paddingTop" />
     </q-breadcrumbs>
     <searchComponent></searchComponent>
 

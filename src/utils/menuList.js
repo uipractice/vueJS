@@ -163,7 +163,7 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
                        "hovLogo":hovButtonIcon
                      },
                      {
-                      "name":" InnerLoading",
+                      "name":"InnerLoading",
                        "path":"/InnerLoading",
                        "desc":"This is  InnerLoading component",
                        "logoSrc":spinnericon,
