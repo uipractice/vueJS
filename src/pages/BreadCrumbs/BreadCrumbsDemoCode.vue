@@ -77,7 +77,7 @@
         <q-breadcrumbs active-color="white" style="font-size: 16px">
           <q-breadcrumbs-el label="Home" icon="home" />
           <q-breadcrumbs-el label="Components" icon="widgets" />
-          <q-breadcrumbs-el label="Toolbar" />
+          <q-breadcrumbs-el :label="toolbar" />
         </q-breadcrumbs>
       </q-toolbar>
     </div>
@@ -86,5 +86,6 @@
   </template>
 
   <script setup>
-//   import { ref } from 'vue'
+   import { ref } from 'vue'
+   var toolbar = ref("Toolbar")
   </script>

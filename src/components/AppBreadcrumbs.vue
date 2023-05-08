@@ -1,13 +1,5 @@
-
-<script setup>
-
-// import { ref } from 'vue'
-import './AppBreadcrumbs.scss';
-import router from "@/router";
-
-</script>
 <template>
-     <div class='app-breadcrumbs'>
+     <div class='app-breadcrumbs' style="display:flex;justify-content: space-between;">
        
     <q-breadcrumbs>
       <template v-slot:separator>
@@ -21,10 +13,24 @@ import router from "@/router";
       <q-breadcrumbs-el label="Home"  to="/"  class="paddingTop" />
 
       <q-breadcrumbs-el label="Vuejs" to="/" class="paddingTop" />
-      <q-breadcrumbs-el :label="router.currentRoute.value.name" :to="router.currentRoute.value.name" class="paddingTop" />
+      <q-breadcrumbs-el v-if="router.currentRoute.value.name != 'home'" :label="router.currentRoute.value.name" :to="router.currentRoute.value.name" class="paddingTop" />
+      <q-breadcrumbs-el v-else :label="router.currentRoute.value.name" :to="'/'" class="paddingTop" />
     </q-breadcrumbs>
+    <searchComponent></searchComponent>
+
     </div>
 </template>
+
+
+<script setup>
+// import { ref  } from 'vue'
+import './AppBreadcrumbs.scss';
+import router from "@/router";
+import searchComponent from "./searchComponent.vue";
+
+
+</script>
+
 <style>
  .paddingTop{
   padding-top: 0px !important;
@@ -35,4 +41,5 @@ import router from "@/router";
  a{
   text-decoration: none !important;
  }
+
 </style>

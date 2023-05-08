@@ -10,28 +10,28 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/button',
-      name: 'button',
+      path: '/Button',
+      name: 'Button',
       component: () => import('../pages/Button/ButtonContainer.vue')
     },
     {
-      path: '/avatar',
-      name: 'avatar',
+      path: '/Avatar',
+      name: 'Avatar',
       component: () => import('../pages/Avatar/AvatarContainer.vue')
     },
     {
-      path: '/badge',
-      name: 'badge',
+      path: '/Badge',
+      name: 'Badge',
       component: () => import('../pages/Badge/BadgeContainer.vue')
     },
     {
-      path: '/breadCrumbs',
-      name: 'breadCrumbs',
+      path: '/BreadCrumbs',
+      name: 'BreadCrumbs',
       component: () => import('../pages/BreadCrumbs/BreadCrumbsContainer.vue')
     },
     {
-      path: '/cards',
-      name: 'cards',
+      path: '/Cards',
+      name: 'Cards',
       component: () => import('../pages/Cards/CardsContainer.vue')
     },
     {
