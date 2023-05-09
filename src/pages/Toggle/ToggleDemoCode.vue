@@ -3,11 +3,11 @@
       <div class="q-pa-md q-gutter-sm">
             <q-toggle v-model="value" />
             <q-toggle
-            v-model="value"
+            v-model="value1"
             color="green"
             />
             <q-toggle
-                  v-model="value"
+                  v-model="value2"
                   label="On Right"
                   />
       </div>
@@ -23,7 +23,7 @@
           </div>
       <div class="q-pa-md q-gutter-sm">
             <q-toggle
-                  v-model="value"
+                  v-model="value3"
                   color="primary"
                   disable
                   label="Disabled"
@@ -44,6 +44,9 @@
   <script setup>
   import { ref } from 'vue'
   var value = ref(true)
+  var value1 = ref(true)
+  var value2 = ref(true)
+  var value3 = ref(true)
   var selection = ref([])
   var notifications = ref(['friend'])
   </script>

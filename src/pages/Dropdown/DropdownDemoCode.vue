@@ -2,13 +2,13 @@
      <div class='demo-wrapper'>
       <div class="q-pa-md" style="max-width: 300px">
     <div class="q-gutter-md">
-                  <q-select v-model="model" :options="options" label="Standard" />
+                  <q-select v-model="model4" :options="options" label="Standard" />
 
-            <q-select filled v-model="model" :options="options" label="Filled" />
+            <q-select filled v-model="model1" :options="options" label="Filled" />
 
-            <q-select outlined v-model="model" :options="options" label="Outlined" />
+            <q-select outlined v-model="model9" :options="options" label="Outlined" />
 
-            <q-select standout v-model="model" :options="options" label="Standout" />
+            <q-select standout v-model="model3" :options="options" label="Standout" />
             </div>
             </div>
       
@@ -34,7 +34,7 @@
       <q-select
         disable
         filled
-        v-model="model"
+        v-model="model5"
         :options="options"
         hint="Disable"
         style="width: 250px"
@@ -43,7 +43,7 @@
       <q-select
         readonly
         filled
-        v-model="model"
+        v-model="model6"
         :options="options"
         hint="Readonly"
         style="width: 250px"
@@ -53,7 +53,7 @@
         disable
         readonly
         filled
-        v-model="model"
+        v-model="model7"
         :options="options"
         hint="Disable and readonly"
         style="width: 250px"
@@ -63,7 +63,7 @@
       <div class="q-pa-md q-gutter-sm">
             <q-select
         filled
-        v-model="model"
+        v-model="model8"
         use-input
         input-debounce="0"
         label="Simple filter"
@@ -99,29 +99,29 @@
         style="width: 250px"
       />
       <q-badge color="secondary" multi-line>
-        Model: "{{ model }}"
+        Model: "{{ model10 }}"
       </q-badge>
 
       <q-select
         filled
-        v-model="model"
+        v-model="model10"
         :options="options"
         stack-label
         label="Standard"
-        :display-value="`Company: ${model ? model : '*none*'}`"
+        :display-value="`Company: ${model10 ? model10 : '*none*'}`"
       >
         <template v-slot:append>
           <q-icon
-            v-if="model !== null"
+            v-if="model10 !== null"
             class="cursor-pointer"
             name="clear"
-            @click.stop.prevent="model = null"
+            @click.stop.prevent="model10 = null"
           />
         </template>
       </q-select>
       <q-select
           filled
-          v-model="model2"
+          v-model="model11"
           multiple
           :options="options"
           use-chips
@@ -132,7 +132,7 @@
       <div class="q-pa-md q-gutter-sm">
       <q-select
         filled
-        v-model="model"
+        v-model="model12"
         use-input
         hide-selected
         fill-input
@@ -156,7 +156,21 @@
 
   <script setup>
    import { ref } from 'vue'
-      var model =ref(null)
+   var model =ref(null)
+      var model1 =ref(null)
+      var model3 =ref(null)
+      var model4 =ref(null)
+      var model5 =ref(null)
+      var model6 =ref(null)
+      var model7=ref(null)
+      var model8 =ref(null)
+      var model9 =ref(null)
+      var model10 =ref(null)
+      var model11 =ref(null)
+      var model12 =ref(null)
+ 
+
+
       var dense =ref(false)
       var denseOpts = ref(false)
      const stringOptions = ['Google', 'Facebook', 'Twitter', 'Apple', 'Oracle']

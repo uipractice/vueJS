@@ -22,6 +22,7 @@ import { ref } from 'vue'
         </div>
 // group
         <div class="q-pa-md q-gutter-sm">
+          <h5>checkbox group :select one of them</h5>
           <q-option-group
       :options="options"
       type="radio"

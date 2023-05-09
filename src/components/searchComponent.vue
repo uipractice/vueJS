@@ -75,7 +75,7 @@ for(var i=0;i<menuList.value.length;i++){
     }
   }
   </script>
-  <style>
+  <style scoped>
  .self-stretch {
     align-self: center !important;
 }

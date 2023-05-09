@@ -113,6 +113,8 @@ import { ref } from 'vue'
       />
         </div>
 
+        import { useQuasar } from 'quasar'
+        const $q = useQuasar()
         import { ref } from 'vue'
         var model = ref(null)
         var files = ref(null)

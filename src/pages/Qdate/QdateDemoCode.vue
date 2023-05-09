@@ -1,9 +1,9 @@
 <template>
      <div class='demo-wrapper'>
          <div class="q-pa-md q-gutter-sm">
-            <q-date v-model="date" landscape />
+            <q-date v-model="date5" landscape />
             <q-date
-            v-model="date"
+            v-model="date1"
             minimal
             disable
             />
@@ -23,15 +23,15 @@
 
           <q-date v-model="model" range />
            <q-date
-            v-model="date"
+            v-model="date2"
             default-view="Years"
        />
        <q-date
-      v-model="date"
+      v-model="date3"
       today-btn
     />
     <q-date
-        v-model="date"
+        v-model="date4"
         :events="eventsFn"
       />
     <q-date v-model="model" mask="YYYY-MM-DD HH:mm" color="purple" />
@@ -50,18 +50,18 @@
             </q-popup-proxy>
             </q-btn>
             <q-input filled v-model="date" mask="date" :rules="['date']">
-      <template v-slot:append>
-        <q-icon name="event" class="cursor-pointer">
-          <q-popup-proxy cover transition-show="scale" transition-hide="scale">
-            <q-date v-model="date">
-              <div class="row items-center justify-end">
-                <q-btn v-close-popup label="Close" color="primary" flat />
-              </div>
-            </q-date>
-          </q-popup-proxy>
-        </q-icon>
-      </template>
-    </q-input>
+                <template v-slot:append>
+                  <q-icon name="event" class="cursor-pointer">
+                    <q-popup-proxy cover transition-show="scale" transition-hide="scale">
+                      <q-date v-model="date">
+                        <div class="row items-center justify-end">
+                          <q-btn v-close-popup label="Close" color="primary" flat />
+                        </div>
+                      </q-date>
+                    </q-popup-proxy>
+                  </q-icon>
+                </template>
+            </q-input>
       </div>
     </div>
   </template>
@@ -69,6 +69,12 @@
   <script setup>
    import { ref } from 'vue'
    var date = ref('2019/02/01')
+   var date1 = ref('2019/02/01')
+   var date2 = ref('2019/02/01')
+   var date3 = ref('2019/02/01')
+   var date4 = ref('2019/02/01')
+   var date5 = ref('2019/02/01')
+   var date6 = ref('2019/02/01')
     var days = ref([ '2019/02/01', '2019/02/10' ])
     var model = ref({ from: '2020/07/08', to: '2020/07/17' })
    function eventsFn (date) {
