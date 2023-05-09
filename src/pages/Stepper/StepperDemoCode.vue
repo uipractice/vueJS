@@ -30,17 +30,20 @@
 
       <q-step
         :name="3"
-        title="Ad template"
-        icon="assignment"
-        disable
+        title="Create an ad group"
+        caption="Optional"
+        icon="create_new_folder"
+        :done="step > 3"
       >
-        This step won't show up because it is disabled.
+        An ad group contains one or more ads which target a shared set of keywords.
       </q-step>
 
       <q-step
         :name="4"
         title="Create an ad"
         icon="add_comment"
+        caption="Optional"
+        :done="step > 4"
       >
         Try out different ad text to see what brings in the most customers, and learn how to
         enhance your ads using features like ad extensions. If you run into any problems with
@@ -49,7 +52,7 @@
 
       <template v-slot:navigation>
         <q-stepper-navigation>
-          <q-btn @click="$refs.stepper.next()" color="primary" :label="step === 4 ? 'Finish' : 'Continue'" />
+          <q-btn @click="$refs.stepper.next()" color="primary" :label="step === 5 ? 'Finish' : 'Continue'" />
           <q-btn v-if="step > 1" flat color="primary" @click="$refs.stepper.previous()" label="Back" class="q-ml-sm" />
         </q-stepper-navigation>
       </template>
@@ -58,8 +61,8 @@
 
       <div class="q-pa-md q-gutter-sm">
             <q-stepper
-      v-model="step"
-      ref="stepper"
+      v-model="step2"
+      ref="stepper2"
       animated
       active-color="purple"
     >
@@ -94,16 +97,16 @@
 
       <template v-slot:navigation>
         <q-stepper-navigation>
-          <q-btn @click="$refs.stepper.next()" color="deep-orange" :label="step === 3 ? 'Finish' : 'Continue'" />
-          <q-btn v-if="step > 1" flat color="deep-orange" @click="$refs.stepper.previous()" label="Back" class="q-ml-sm" />
+          <q-btn @click="$refs.stepper2.next()" color="deep-orange" :label="step2 === 3 ? 'Finish' : 'Continue'" />
+          <q-btn v-if="step2 > 1" flat color="deep-orange" @click="$refs.stepper2.previous()" label="Back" class="q-ml-sm" />
         </q-stepper-navigation>
       </template>
     </q-stepper>
       </div>
       <div class="q-pa-md q-gutter-sm">
             <q-stepper
-      v-model="step"
-      ref="stepper"
+      v-model="step3"
+      ref="stepper3"
       color="primary"
       animated
     >
@@ -134,7 +137,6 @@
         :name="3"
         title="Ad template"
         icon="assignment"
-        disable
         style="min-height: 200px;"
       >
         This step won't show up because it is disabled.
@@ -153,19 +155,19 @@
 
       <template v-slot:navigation>
         <q-stepper-navigation>
-          <q-btn @click="$refs.stepper.next()" color="primary" :label="step === 4 ? 'Finish' : 'Continue'" />
-          <q-btn v-if="step > 1" flat color="primary" @click="$refs.stepper.previous()" label="Back" class="q-ml-sm" />
+          <q-btn @click="$refs.stepper3.next()" color="primary" :label="step3 === 4 ? 'Finish' : 'Continue'" />
+          <q-btn v-if="step3 > 1" flat color="primary" @click="$refs.stepper3.previous()" label="Back" class="q-ml-sm" />
         </q-stepper-navigation>
       </template>
 
       <template v-slot:message>
-        <q-banner v-if="step === 1" class="bg-purple-8 text-white q-px-lg">
+        <q-banner v-if="step3 === 1" class="bg-purple-8 text-white q-px-lg">
           Campaign settings are important...
         </q-banner>
-        <q-banner v-else-if="step === 2" class="bg-orange-8 text-white q-px-lg">
+        <q-banner v-else-if="step3 === 2" class="bg-orange-8 text-white q-px-lg">
           The ad group helps you to...
         </q-banner>
-        <q-banner v-else-if="step === 3" class="bg-green-8 text-white q-px-lg">
+        <q-banner v-else-if="step3 === 3" class="bg-green-8 text-white q-px-lg">
           The Ad template is disabled - this won't be displayed
         </q-banner>
         <q-banner v-else class="bg-blue-8 text-white q-px-lg">
@@ -180,4 +182,6 @@
   <script setup>
   import { ref } from 'vue'
 var step = ref(1)
+var step2 = ref(1)
+var step3 = ref(1)
   </script>
