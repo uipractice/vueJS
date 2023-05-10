@@ -1,12 +1,13 @@
 <template>
-        <q-select
+    <q-select
           v-model="model"
           use-input
           input-debounce="0"
           :options="options"
           @filter="filterFn"
-          style="width: 290px"
+          style="width: 290px;margin-top: -9px;"
           behavior="menu"
+          :dense="dense"
         >
           <template v-slot:no-option>
             <q-item>
@@ -18,14 +19,18 @@
           <template v-slot:append>
           <q-icon name="search" />
         </template>
-        </q-select>
+    </q-select>
   </template>
   
   <script>
   import { ref ,watch} from 'vue'
   import { menuList } from '../utils/menuList';
   import router from "@/router";
+
+  
+
   var stringOptions = []
+
 for(var i=0;i<menuList.value.length;i++){
   for(var j=0;j<menuList.value[i].listOfSubCom.length;j++){
      stringOptions.push(menuList.value[i].listOfSubCom[j].name);
@@ -52,7 +57,7 @@ for(var i=0;i<menuList.value.length;i++){
         model,
         stringOptions,
         options,
-  
+        dense: ref(true),
         filterFn (val, update) {
         //  if(model.value){
         //     router.push({ path: '/'+model.value, replace: true })
@@ -80,5 +85,9 @@ for(var i=0;i<menuList.value.length;i++){
 }
 .q-field__control:before, .q-field__control:after{
   bottom: 13px !important;
+}
+
+.search_align{
+  /* background-color: black; */
 }
 </style>
