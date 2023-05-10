@@ -3,7 +3,6 @@
           v-model="model"
           use-input
           input-debounce="0"
-          label="Search"
           :options="options"
           @filter="filterFn"
           style="width: 290px"

@@ -130,13 +130,13 @@ const router = createRouter({
       component: () => import('../pages/Table/TableContainer.vue')
     },
     {
-      path: '/ServerSideTable',
-      name: 'ServerSideTable',
+      path: '/ApiTable(Pagination,filter)',
+      name: 'ApiTable(Pagination,filter)',
       component: () => import('../pages/Table/ServerSideTableContainer.vue')
     },
     {
-      path: '/PopupEditingTable',
-      name: 'PopupEditingTable',
+      path: '/PopupEditingTable(shorting)',
+      name: 'PopupEditingTable(shorting)',
       component: () => import('../pages/Table/PopupEditingTableContainer.vue')
     },
     {
