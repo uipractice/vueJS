@@ -1,5 +1,5 @@
 <template>
-   <div class='components-grid'>
+   <div class='components-grid' style="padding-bottom: 50px;">
     <div v-for="(menuItem,index) in menuListLocal" :key="index">
       <h3 class='component-type-desc'>{{ menuItem.label }}</h3>
       <div   class='component-grid-container3 ownGrid'>
@@ -27,7 +27,9 @@ console.log("@@@ menulist in card",menuListLocal);
 <style>
 .ownGrid{
   display: grid;
-  gap: 50px;
+  /* gap: 50px; */
+  row-gap: 20px;
+    column-gap: 0px;
   grid-template-columns: repeat(3, 1fr) 
 }
 </style>
