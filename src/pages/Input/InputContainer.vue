@@ -44,24 +44,24 @@ import { ref } from 'vue'
   
   <div class="q-pa-md">
     <div class="q-gutter-y-md column" style="max-width: 300px">
-      // Stadard
-      <q-toggle v-model="dense" label="Dense QInput" />
+          // Stadard
+          <q-toggle v-model="dense" label="Dense QInput" />
 
-     <q-input v-model="text" :dense="dense" />
+          <q-input v-model="text" :dense="dense" />
 
-      <q-input v-model="text" label="Label (stacked)" stack-label :dense="dense" />
-      //Filled
-      <q-toggle v-model="dense" label="Dense QInput" />
+          <q-input v-model="text" label="Label (stacked)" stack-label :dense="dense" />
+          //Filled
+          <q-toggle v-model="dense" label="Dense QInput" />
 
-<q-input filled v-model="text" :dense="dense" />
+          <q-input filled v-model="text" :dense="dense" />
 
-<q-input filled v-model="text" label="Label (stacked)" stack-label :dense="dense" />
-//Outline
-<q-toggle v-model="dense" label="Dense QInput" />
+          <q-input filled v-model="text" label="Label (stacked)" stack-label :dense="dense" />
+          //Outline
+          <q-toggle v-model="dense" label="Dense QInput" />
 
-<q-input outlined v-model="text" :dense="dense" />
+          <q-input outlined v-model="text" :dense="dense" />
 
-<q-input outlined v-model="text" label="Label (stacked)" stack-label :dense="dense" />
+          <q-input outlined v-model="text" label="Label (stacked)" stack-label :dense="dense" />
 
 //Rounded
 <q-input rounded outlined v-model="text">
@@ -97,90 +97,90 @@ import { ref } from 'vue'
         </template>
       </q-input>
    //Disabled
-   <q-input filled v-model="text" hint="Disable" :dense="dense" disable />
-//Readonly
-<q-input filled v-model="text" hint="Readonly" :dense="dense" readonly />
-//Clearable
-<q-input
-        clearable
-        clear-icon="close"
-        filled
-        color="purple-12"
-        v-model="text"
-        label="Label"
-      />
-
-      //PAssword with toggle
-      <q-input v-model="password" filled :type="isPwd ? 'password' : 'text'" hint="Password with toggle">
-        <template v-slot:append>
-          <q-icon
-            :name="isPwd ? 'visibility_off' : 'visibility'"
-            class="cursor-pointer"
-            @click="isPwd = !isPwd"
+          <q-input filled v-model="text" hint="Disable" :dense="dense" disable />
+   //Readonly
+          <q-input filled v-model="text" hint="Readonly" :dense="dense" readonly />
+  //Clearable
+          <q-input
+                  clearable
+                  clear-icon="close"
+                  filled
+                  color="purple-12"
+                  v-model="text"
+                  label="Label"
           />
-        </template>
-      </q-input>
-      //Native time
-      <q-input v-model="date" filled type="date" hint="Native date" />
-      //number type 
-      <q-input
-      v-model.number="model"
-      type="number"
-      filled
-      style="max-width: 200px"
-    />
-    //textarea
-    <q-input
-      v-model="text"
-      filled
-      type="textarea"
-    />
-    //autogrow
-    <q-input
-      v-model="text"
-      filled
-      autogrow
-    />
-    //Debouncing
-    <q-input
-        v-model="search"
-        debounce="500"
-        filled
-        placeholder="Search"
-        hint="Debouncing 500ms"
-      >
-        <template v-slot:append>
-          <q-icon name="search" />
-        </template>
-      </q-input>
-      //async rules
-      <q-input
-      ref="inputRef"
-      filled
-      v-model="model"
-      label="Required Field *"
-      :rules="[ myRule ]"
-    />
 
-    <q-btn class="q-mt-sm" label="Reset Validation" @click="reset" color="primary"/>
-      //phone number
-      <q-input
-        filled
-        v-model="phone"
-        label="Phone"
-        mask="(###) ### - ####"
-        fill-mask
-        hint="Mask: (###) ### - ####"
-      />
-    //card
-      <q-input
-        filled
-        v-model="card"
-        label="Card"
-        mask="#### #### #### ####"
-        fill-mask="#"
-        hint="Mask: #### #### #### ####, FillMask: #"
-      />
+  //PAssword with toggle
+      <q-input v-model="password" filled :type="isPwd ? 'password' : 'text'" hint="Password with toggle">
+            <template v-slot:append>
+                <q-icon
+                    :name="isPwd ? 'visibility_off' : 'visibility'"
+                    class="cursor-pointer"
+                    @click="isPwd = !isPwd"
+                />
+            </template>
+      </q-input>
+  //Native time
+            <q-input v-model="date" filled type="date" hint="Native date" />
+  //number type 
+            <q-input
+                  v-model.number="model"
+                  type="number"
+                  filled
+                  style="max-width: 200px"
+          />
+  //textarea
+            <q-input
+                  v-model="text"
+                  filled
+                  type="textarea"
+            />
+  //autogrow
+            <q-input
+                  v-model="text"
+                  filled
+                  autogrow
+            />
+  //Debouncing
+            <q-input
+                    v-model="search"
+                    debounce="500"
+                    filled
+                    placeholder="Search"
+                    hint="Debouncing 500ms"
+              >
+                    <template v-slot:append>
+                         <q-icon name="search" />
+                    </template>
+              </q-input>
+  //async rules
+                <q-input
+                        ref="inputRef"
+                        filled
+                        v-model="model"
+                        label="Required Field *"
+                        :rules="[ myRule ]"
+              />
+
+            <q-btn class="q-mt-sm" label="Reset Validation" @click="reset" color="primary"/>
+  //phone number
+          <q-input
+                  filled
+                  v-model="phone"
+                  label="Phone"
+                  mask="(###) ### - ####"
+                  fill-mask
+                  hint="Mask: (###) ### - ####"
+          />
+  //card
+          <q-input
+                  filled
+                  v-model="card"
+                  label="Card"
+                  mask="#### #### #### ####"
+                  fill-mask="#"
+                  hint="Mask: #### #### #### ####, FillMask: #"
+          />
     </div>
 </template>
 

@@ -11,34 +11,33 @@ import { ref } from 'vue'
 
   var  buttonCode = ref('')
   buttonCode =`
-  <template>
-     <div class='demo-wrapper'>
-      <div class="q-pa-md" style="max-width: 400px">
+<div class='demo-wrapper'>
+<div class="q-pa-md" style="max-width: 400px">
 
-      <q-form
+  <q-form
       @submit="onSubmit"
       @reset="onReset"
       class="q-gutter-md"
       >
   <q-input
-    filled
-    v-model="name"
-    label="Your name *"
-    hint="Name and surname"
-    lazy-rules
-    :rules="[ val => val && val.length > 0 || 'Please type something']"
+      filled
+      v-model="name"
+      label="Your name *"
+      hint="Name and surname"
+      lazy-rules
+      :rules="[ val => val && val.length > 0 || 'Please type something']"
   />
 
   <q-input
-    filled
-    type="number"
-    v-model="age"
-    label="Your age *"
-    lazy-rules
-    :rules="[
-      val => val !== null && val !== '' || 'Please type your age',
-      val => val > 0 && val < 100 || 'Please type a real age'
-    ]"
+      filled
+      type="number"
+      v-model="age"
+      label="Your age *"
+      lazy-rules
+      :rules="[
+        val => val !== null && val !== '' || 'Please type your age',
+        val => val > 0 && val < 100 || 'Please type a real age'
+      ]"
   />
 
   <q-toggle v-model="accept" label="I accept the license and terms" />
@@ -51,7 +50,6 @@ import { ref } from 'vue'
 
 </div>
  </div>
-  </template>
 
 
 

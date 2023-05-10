@@ -327,9 +327,12 @@ import { ref } from 'vue'
 </q-btn>
 
 </div>
-        </div>
-        </div>
-        </div>
+</div>
+</div>
+</div>
+
+  import { ref } from 'vue'
+  var showing = ref(false)
         `
 </script>
 <style>
