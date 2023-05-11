@@ -18,7 +18,7 @@
         </q-tabs>
   
         <q-separator />
-        <q-tab-panels v-model="tab" animated>
+        <q-tab-panels v-model="tab" animated style="padding: 10px 30px;">
           <q-tab-panel name="demo"  label="Demo">
             <!-- <div class="text-h6" >demo</div> -->
             <!-- prop name{{propsObj.propsDemo }}

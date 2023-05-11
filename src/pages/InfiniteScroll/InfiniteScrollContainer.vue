@@ -52,7 +52,7 @@ import { ref } from 'vue'
     </div>
 
 
-    import { ref } from 'vue'
+   import { ref } from 'vue'
    const items = ref([ {}, {}, {}, {}, {}, {}, {} ])
 
    var isReverse = ref(false)

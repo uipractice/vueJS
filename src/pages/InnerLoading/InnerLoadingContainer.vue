@@ -13,8 +13,8 @@ import { ref } from 'vue'
   buttonCode =`
        
   <q-btn color="primary" @click="showTextLoading">
-      Show it
-    </q-btn>
+    Show it
+  </q-btn>
 
     <q-card class="relative-position card-example" flat bordered>
       <q-card-section class="q-pb-none">
@@ -102,11 +102,9 @@ import { ref } from 'vue'
 
         </div>
 
-        import { ref } from 'vue'
-
+import { ref } from 'vue'
 const visible = ref(false)
 const showSimulatedReturnData = ref(false)
-
 
 function showTextLoading () {
     visible.value = true

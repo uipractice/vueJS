@@ -6,20 +6,19 @@
               Loading...
             </div>
             <q-table
-                  title="Treats"
                   :rows="resUsers.data"
                   :columns="columnsUsers"
                   row-key="name"
+
                   v-else
             />
            </div>
       
       <div class="q-pa-md q-gutter-sm">
-            <h6>sticky</h6>
+            <h6>sticky with shorting</h6>
             <q-table
                   class="my-sticky-header-column-table"
                   flat bordered
-                  title="Treats"
                   :rows="rows"
                   :columns="columns"
                   row-key="name"
@@ -31,7 +30,6 @@
             <h6>selection table</h6>
             <q-table
                   flat bordered
-                  title="Treats"
                   :rows="resComments.data"
                   :columns="columnsComments"
                   row-key="name"
@@ -345,10 +343,9 @@ const columnsUsers = [{
     label: 'Name',
     align: 'left',
     field: row => row.name,
-    sortable: true
   },
-  { name: 'email', align: 'center', label: 'Email', field: 'email', sortable: true },
-  { name: 'phone', label: 'Phone', field: 'phone', sortable: true },
+  { name: 'email', align: 'center', label: 'Email', field: 'email' },
+  { name: 'phone', label: 'Phone', field: 'phone'},
   { name: 'website', label: 'Website', field: 'website' },
   { name: 'company', label: 'Company', field: row=>row.company.name },
   { name: 'address', label: 'Address', field: row=>row.address.city }

@@ -12,13 +12,13 @@ import { ref } from 'vue'
   var  buttonCode = ref('')
   buttonCode =`
   //DropdownDemoCode
-  <q-select v-model="model" :options="options" label="Standard" />
+        <q-select v-model="model" :options="options" label="Standard" />
 
-<q-select filled v-model="model" :options="options" label="Filled" />
+        <q-select filled v-model="model" :options="options" label="Filled" />
 
-<q-select outlined v-model="model" :options="options" label="Outlined" />
+        <q-select outlined v-model="model" :options="options" label="Outlined" />
 
-<q-select standout v-model="model" :options="options" label="Standout" />
+        <q-select standout v-model="model" :options="options" label="Standout" />
         
         <div class="q-pa-md q-gutter-sm">
           <q-select rounded outlined bottom-slots v-model="model" :options="options" label="Label" counter maxlength="12" :dense="dense" :options-dense="denseOpts">

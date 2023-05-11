@@ -11,7 +11,7 @@
       </q-tabs>
 
       <q-tabs
-        v-model="tab"
+        v-model="tab1"
         inline-label
         class="bg-purple text-white shadow-2"
       >
@@ -21,7 +21,7 @@
       </q-tabs>
 
       <q-tabs
-        v-model="tab"
+        v-model="tab2"
         no-caps
         class="bg-orange text-white shadow-2"
       >
@@ -34,7 +34,7 @@
 
       <div class="q-pa-md q-gutter-sm" style="max-width: 300px">
             <q-tabs
-                  v-model="tab"
+                  v-model="tab3"
                   inline-label
                   outside-arrows
                   mobile-arrows
@@ -58,14 +58,14 @@
         notice shrink property since we are placing it
         as child of QToolbar
       -->
-      <q-tabs v-model="tab" shrink stretch>
+      <q-tabs v-model="tab4" shrink stretch>
         <q-tab name="tab1" label="Tab 1" />
         <q-tab name="tab2" label="Tab 2" />
         <q-tab name="tab3" label="Tab 3" />
       </q-tabs>
     </q-toolbar>
     <q-tabs
-        v-model="tab"
+        v-model="tab5"
         class="bg-primary text-white shadow-2"
       >
         <q-tab name="mails" icon="mail" label="Mails">
@@ -77,7 +77,7 @@
         <q-tab alert name="movies" icon="movie" label="Movies" />
       </q-tabs>
       <q-tabs
-          v-model="tab"
+          v-model="tab6"
           dense
           class="text-grey"
           active-color="primary"
@@ -92,7 +92,7 @@
 
         <q-separator />
 
-        <q-tab-panels v-model="tab" animated>
+        <q-tab-panels v-model="tab7" animated>
           <q-tab-panel name="mails">
             <div class="text-h6">Mails</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -115,4 +115,12 @@
   <script setup>
    import { ref } from 'vue'
 var tab = ref('mails')
+var tab1 = ref('mails')
+var tab2 = ref('mails')
+var tab3 = ref('mails')
+var tab4 = ref('mails')
+var tab5 = ref('mails')
+var tab6 = ref('mails')
+var tab7 = ref('mails')
+
   </script>

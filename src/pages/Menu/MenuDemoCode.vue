@@ -2,8 +2,7 @@
      <div class='demo-wrapper'>
       <div class="q-pa-md q-gutter-sm">
   
-    <div class="q-gutter-md">
-
+    
       <q-btn color="primary" label="Basic Menu with persistance">
         <q-menu persistent >
           <q-list style="min-width: 100px">
@@ -88,9 +87,6 @@
           </q-list>
         </q-menu>
       </div>
-
-    </div>
- 
       </div>
 
       <div class="q-pa-md q-gutter-sm">
@@ -125,10 +121,10 @@
     </q-btn>
       </div>
       <div class="q-pa-md q-gutter-sm">
-            <div class="q-gutter-sm">
+            
       <q-btn color="primary" @click="showing = true" label="Show with v-modal"/>
       <q-btn color="primary" @click="showing = false" label="Hide with v-modal"/>
-    </div>
+    
 
     <div
       style="width: 200px; height: 70px;"
@@ -213,7 +209,7 @@
       </div>
 
       <div class="q-pa-md q-gutter-sm">
-            <div class="q-gutter-md row">
+            
 
 <q-btn color="primary" label="Anchor/Self Menu">
   <q-menu
@@ -308,7 +304,7 @@
   </q-menu>
 </q-btn>
 
-</div>
+
       </div>
     </div>
   </template>

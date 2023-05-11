@@ -121,11 +121,10 @@ const columnsComments = [{
  required: true,
  label: 'Name',
  align: 'left',
- field: row => row.name,
- sortable: true
+ field: row => row.name
 },
-{ name: 'year', align: 'center', label: 'year', field: 'year', sortable: true },
-{ name: 'color', align: 'center', label: 'color', field: 'color', sortable: true }
+{ name: 'year', align: 'center', label: 'year', field: 'year' },
+{ name: 'color', align: 'center', label: 'color', field: 'color' }
 
 ]
 

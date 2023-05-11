@@ -1,9 +1,9 @@
 <template>
      <div class='demo-wrapper'>
       <button @click="reverseClick()">Reverse</button>
-      <div class="q-pa-md q-gutter-sm" style="min-height: 5vh;" v-if="!isReverse">
+      <div class="q-pa-md q-gutter-sm" style="min-height: 200px;" v-if="!isReverse">
             <h6>Infinite scroll</h6>
-            <div class="q-pa-md" style="height: 20vh;">
+            <div class="q-pa-md" style="height: 200px;">
             <q-infinite-scroll @load="onLoad" :offset="5">
                   <div v-for="(item, index) in items" :key="index" class="caption">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.</p>
@@ -17,9 +17,9 @@
             </div>
       </div>
 
-      <div class="q-pa-md q-gutter-sm" style="min-height: 5vh;" v-else>
+      <div class="q-pa-md q-gutter-sm" style="min-height: 200px;" v-else>
             <h6>Reverse Infinite scroll</h6>
-            <div class="q-pa-md" style="height: 20vh;">
+            <div class="q-pa-md" style="height: 200px;">
             <q-infinite-scroll @load="onLoad" reverse>
                   <template v-slot:loading>
                   <div class="row justify-center q-my-md">

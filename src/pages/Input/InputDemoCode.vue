@@ -1,49 +1,51 @@
 <template>
      <div class='demo-wrapper'>
-      <div class="q-gutter-md" style="max-width: 300px">
+      <div class="q-pa-md q-gutter-sm" style="max-width: 300px">
       <q-input v-model="text" label="Standard" />
 
-      <q-input filled v-model="text" label="Filled" />
+      <q-input filled v-model="text1" label="Filled" />
 
-      <q-input outlined v-model="text" label="Outlined" />
+      <q-input outlined v-model="text2" label="Outlined" />
 
-      <q-input standout v-model="text" label="Standout" />
+      <q-input standout v-model="text3" label="Standout" />
 
-      <q-input standout="bg-teal text-white" v-model="text" label="Custom standout" />
+      <q-input standout="bg-teal text-white" v-model="text4" label="Custom standout" />
 
-      <q-input borderless v-model="text" label="Borderless" />
+      <q-input borderless v-model="text5" label="Borderless" />
 
-      <q-input rounded filled v-model="text" label="Rounded filled" />
+      <q-input rounded filled v-model="text6" label="Rounded filled" />
 
-      <q-input rounded outlined v-model="text" label="Rounded outlined" />
+      <q-input rounded outlined v-model="text7" label="Rounded outlined" />
 
-      <q-input rounded standout v-model="text" label="Rounded standout" />
+      <q-input rounded standout v-model="text8" label="Rounded standout" />
 
-      <q-input square filled v-model="text" label="Square filled" />
+      <q-input square filled v-model="text9" label="Square filled" />
 
-      <q-input square outlined v-model="text" label="Square outlined" />
+      <q-input square outlined v-model="text10" label="Square outlined" />
 
-      <q-input square standout v-model="text" label="Square standout" />
+      <q-input square standout v-model="text11" label="Square standout" />
     </div>
       
       <div class="q-pa-md q-gutter-sm">
-         <q-toggle v-model="dense" label="Dense QInput" />
-         <q-input v-model="text" :dense="dense" />
-         <q-input v-model="text" label="Label (stacked)" stack-label :dense="dense" />
-         <q-toggle v-model="dense" label="Dense QInput" />
-            <q-input filled v-model="text" :dense="dense" />
-            <q-input filled v-model="text" label="Label (stacked)" stack-label :dense="dense" />
-            <q-toggle v-model="dense" label="Dense QInput" />
-            <q-input outlined v-model="text" :dense="dense" />
-            <q-input outlined v-model="text" label="Label (stacked)" stack-label :dense="dense" />
-            <q-input rounded outlined v-model="text">
+         <q-toggle v-model="dense1" label="Dense QInput" />
+         <q-input v-model="text12" :dense="dense1" />
+         <q-input v-model="text13" label="Label (stacked)" stack-label :dense="dense1" />
+
+         <q-toggle v-model="dense2" label="Dense QInput" />
+            <q-input filled v-model="text14" :dense="dense2" />
+            <q-input filled v-model="text15" label="Label (stacked)" stack-label :dense="dense2" />
+
+            <q-toggle v-model="dense3" label="Dense QInput" />
+            <q-input outlined v-model="text16" :dense="dense3" />
+            <q-input outlined v-model="text17" label="Label (stacked)" stack-label :dense="dense3" />
+            <q-input rounded outlined v-model="text18">
         <template v-slot:append>
           <q-avatar>
             <img src="https://cdn.quasar.dev/logo-v2/svg/logo.svg">
           </q-avatar>
         </template>
       </q-input>
-      <q-input square outlined v-model="text">
+      <q-input square outlined v-model="text19">
         <template v-slot:append>
           <q-avatar>
             <img src="https://cdn.quasar.dev/logo-v2/svg/logo.svg">
@@ -53,7 +55,7 @@
       </div>
 
       <div class="q-pa-md q-gutter-sm">
-            <q-input filled bottom-slots v-model="text" label="Label" counter maxlength="12" :dense="dense">
+            <q-input filled bottom-slots v-model="text20" label="Label" counter maxlength="12" :dense="dense">
         <template v-slot:before>
           <q-icon name="flight_takeoff" />
         </template>
@@ -67,17 +69,17 @@
           Field hint
         </template>
       </q-input>
-      <q-input filled v-model="text" hint="Disable" :dense="dense" disable />
+      <q-input filled v-model="text21" hint="Disable" :dense="dense" disable />
       <q-input
         clearable
         clear-icon="close"
         filled
         color="purple-12"
-        v-model="text"
+        v-model="text22"
         label="Clearable"
       />
 
-<q-input filled v-model="text" hint="Readonly" :dense="dense" readonly />
+<q-input filled v-model="text23" hint="Readonly" :dense="dense" readonly />
       </div>
       <div class="q-pa-md q-gutter-sm">
             <q-input v-model="password" filled :type="isPwd ? 'password' : 'text'" hint="Password with toggle">
@@ -97,12 +99,12 @@
       style="max-width: 200px"
     />
     <q-input
-      v-model="text"
+      v-model="text24"
       filled
       type="textarea"
     />
     <q-input
-      v-model="text"
+      v-model="text25"
       filled
       autogrow
       placeholder="autogrow"
@@ -163,7 +165,36 @@
    import { ref } from 'vue'
    var  text = ref('')
 
+   var  text1 = ref('')
+   var  text2 = ref('')
+   var  text3 = ref('')
+   var  text4 = ref('')
+   var  text5 = ref('')
+   var  text6 = ref('')
+   var  text7= ref('')
+   var  text8 = ref('')
+   var  text9 = ref('')
+   var  text10 = ref('')
+   var  text11 = ref('')
+   var  text12 = ref('')
+   var  text13 = ref('')
+   var  text14 = ref('')
+   var  text15 = ref('')
+   var  text16 = ref('')
+   var  text17 = ref('')
+   var  text18 = ref('')
+   var  text19 = ref('')
+   var  text20 = ref('')
+   var  text21 = ref('')
+   var  text22 = ref('')
+   var  text23 = ref('')
+   var  text24 = ref('')
+   var  text25 = ref('')
+
    var   dense=  ref(false)
+   var   dense1=  ref(false)
+   var   dense2=  ref(false)
+   var   dense3=  ref(false)
 
        var password =ref('')
        var   isPwd =ref(true)

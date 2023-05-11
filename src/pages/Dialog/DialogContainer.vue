@@ -161,19 +161,19 @@ import { ref } from 'vue'
     <q-btn label="Sliders" color="primary" @click="sliders = true" />
 
     <q-dialog v-model="carousel">
-      <q-carousel
-        transition-prev="slide-right"
-        transition-next="slide-left"
-        swipeable
-        animated
-        v-model="slide"
-        control-color="primary"
-        navigation-icon="radio_button_unchecked"
-        navigation
-        padding
-        height="200px"
-        class="bg-white shadow-1 rounded-borders"
-      >
+          <q-carousel
+                              transition-prev="slide-right"
+                              transition-next="slide-left"
+                              swipeable
+                              animated
+                              v-model="slide"
+                              control-color="primary"
+                              navigation-icon="radio_button_unchecked"
+                              navigation
+                              padding
+                              height="200px"
+                              class="bg-white shadow-1 rounded-borders"
+          >
         <q-carousel-slide :name="1" class="column no-wrap flex-center">
           <q-icon name="style" color="primary" size="56px" />
           <div class="q-mt-md text-center">
@@ -207,11 +207,11 @@ import { ref } from 'vue'
 
         <q-card-section>
           <q-btn
-            fab
-            color="primary"
-            icon="place"
-            class="absolute"
-            style="top: 0; right: 12px; transform: translateY(-50%);"
+                    fab
+                    color="primary"
+                    icon="place"
+                    class="absolute"
+                    style="top: 0; right: 12px; transform: translateY(-50%);"
           />
 
           <div class="row no-wrap items-center">
