@@ -1,13 +1,19 @@
 <template>
+   <q-icon name="search" v-if="!isSearch" @click="searchVisibleClick()"   style="color: #5f5f67; font-size: 20px;font-style: normal;margin-right: 30px;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;"/>
     <q-select
           v-model="model"
           use-input
           input-debounce="0"
           :options="options"
           @filter="filterFn"
-          style="width: 290px;margin-top: -9px;"
+          style="width: 390px;margin-top: -9px;"
           behavior="menu"
           :dense="dense"
+          v-else
         >
           <template v-slot:no-option>
             <q-item>
@@ -16,8 +22,11 @@
               </q-item-section>
             </q-item>
           </template>
-          <template v-slot:append>
+        <template v-slot:prepend>
           <q-icon name="search" />
+        </template>
+        <template v-slot:append>
+          <q-icon name="close" @click.stop.prevent="searchCloseClick()" class="cursor-pointer" />
         </template>
     </q-select>
   </template>
@@ -42,7 +51,7 @@ for(var i=0;i<menuList.value.length;i++){
       var options = ref([])
       options.value = stringOptions
       var model = ref("")
-
+      var isSearch = ref(false);
       watch(model,(curVal)=>{
         console.log("curVal",curVal);
         if(curVal == null){
@@ -51,13 +60,22 @@ for(var i=0;i<menuList.value.length;i++){
         router.push({ path: '/'+curVal, replace: true })
       }
       })
-
+     
+    
 
       return {
         model,
         stringOptions,
         options,
+        isSearch,
         dense: ref(true),
+        searchVisibleClick(){
+           isSearch.value = true
+        },
+        searchCloseClick(){
+            model.value = ""
+            isSearch.value = ""
+        },
         filterFn (val, update) {
         //  if(model.value){
         //     router.push({ path: '/'+model.value, replace: true })
