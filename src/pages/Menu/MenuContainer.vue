@@ -333,6 +333,10 @@ import { ref } from 'vue'
 
   import { ref } from 'vue'
   var showing = ref(false)
+
+  
+  var mobileData = ref(false)
+  var bluetooth = ref(false)
         `
 </script>
 <style>
