@@ -23,9 +23,9 @@
             <!-- <div class="text-h6" >demo</div> -->
             <!-- prop name{{propsObj.propsDemo }}
             {{ compoNames }} -->
-              <div v-for="(compoName,index) in compoNames" :key="index">
+              <div v-for="(compoName,index) in finalCompoName" :key="index">
              
-                <component v-if="compoName.__name == propsObj.propsDemo" :is="compoName">
+                <component  :is="compoName">
                    
                 </component>  
 
@@ -50,7 +50,7 @@
   </template>
   <script setup>
 import router from "@/router";
-import { ref } from 'vue'
+import { ref,computed  } from 'vue'
 import ButtonDemoCode from '@/pages/Button/ButtonDemoCode.vue';
 import AvatarDemoCode from '@/pages/Avatar/AvatarDemoCode.vue';
 import BadgeDemoCode from '@/pages/Badge/BadgeDemoCode.vue';
@@ -94,6 +94,19 @@ import '../css/styles.css'
 })
 
 var  tab = ref('demo')
+var filterCompoNames = []
+
+filterCompoNames =compoNames.filter(compo=>{
+        if(compo.__name == propsObj.propsDemo){
+          return compo
+        }
+})
+
+const finalCompoName = computed(()=>{
+  return filterCompoNames
+})
+
+
 
 </script>
 <style>
