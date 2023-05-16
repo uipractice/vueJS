@@ -1,10 +1,10 @@
 <template>
-   <div class='components-grid' style="padding-bottom: 50px;">
+   <div class='' style="padding-bottom: 50px;">
     <div v-for="(menuItem,index) in menuListLocal" :key="index">
       <h3 class='component-type-desc'>{{ menuItem.label }}</h3>
-      <div   class='component-grid-container3 ownGrid'>
-        <div v-for="(subItem,index) in menuItem.listOfSubCom" :key="index">
-          <RouterLink :to="subItem.path" style="textDecoration:none">
+      <div   style="display: flex;flex-wrap: wrap;">
+        <div v-for="(subItem,index) in menuItem.listOfSubCom" :key="index" >
+          <RouterLink :to="subItem.path">
           <ComponentCard  :cardObj="subItem" ></ComponentCard>
         </RouterLink> 
         </div>
