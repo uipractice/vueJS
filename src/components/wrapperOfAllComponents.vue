@@ -4,7 +4,8 @@
     font-weight: 700;
     text-align: left;
     font-size: 18px;">{{ router.currentRoute.value.name?  router.currentRoute.value.name:'component' }}</h5>
-      <div class="step-tabs-wrapper">
+      <div>
+        <q-card style="margin-bottom:40px !important ;">
         <q-tabs
         v-model="tab"
         no-caps
@@ -45,6 +46,7 @@
               </div>
           </q-tab-panel>
         </q-tab-panels>
+      </q-card>
       </div>
     </div> 
   </template>
