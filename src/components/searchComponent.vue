@@ -3,7 +3,7 @@
     font-size: 20px;
     line-height: 1;
     letter-spacing: normal;
-    text-transform: none;"/>
+    text-transform: none;cursor: pointer;"/>
     <q-select
           v-model="model"
           use-input
