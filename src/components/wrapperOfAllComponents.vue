@@ -4,7 +4,8 @@
     font-weight: 700;
     text-align: left;
     font-size: 18px;">{{ router.currentRoute.value.name?  router.currentRoute.value.name:'component' }}</h5>
-      <div class="step-tabs-wrapper">
+      <div>
+        <q-card style="margin-bottom:40px !important ;">
         <q-tabs
         v-model="tab"
         no-caps
@@ -23,9 +24,9 @@
             <!-- <div class="text-h6" >demo</div> -->
             <!-- prop name{{propsObj.propsDemo }}
             {{ compoNames }} -->
-              <div v-for="(compoName,index) in compoNames" :key="index">
+              <div v-for="(compoName,index) in finalCompoName" :key="index">
              
-                <component v-if="compoName.__name == propsObj.propsDemo" :is="compoName">
+                <component  :is="compoName">
                    
                 </component>  
 
@@ -45,12 +46,13 @@
               </div>
           </q-tab-panel>
         </q-tab-panels>
+      </q-card>
       </div>
     </div> 
   </template>
   <script setup>
 import router from "@/router";
-import { ref } from 'vue'
+import { ref,computed  } from 'vue'
 import ButtonDemoCode from '@/pages/Button/ButtonDemoCode.vue';
 import AvatarDemoCode from '@/pages/Avatar/AvatarDemoCode.vue';
 import BadgeDemoCode from '@/pages/Badge/BadgeDemoCode.vue';
@@ -94,6 +96,19 @@ import '../css/styles.css'
 })
 
 var  tab = ref('demo')
+var filterCompoNames = []
+
+filterCompoNames =compoNames.filter(compo=>{
+        if(compo.__name == propsObj.propsDemo){
+          return compo
+        }
+})
+
+const finalCompoName = computed(()=>{
+  return filterCompoNames
+})
+
+
 
 </script>
 <style>
