@@ -51,49 +51,49 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
                   {
                   "name":"Avatar",
                   "path":"/avatar",
-                  "desc":"This is avatar component",
+                  "desc":"This is avatar component, this can be used as a profile picture,",
                   "logoSrc":buttonicon,
                   "hovLogo":hovButtonIcon
                   },
                    {
                     "name":"Button",
                      "path":"/button",
-                     "desc":"This is button component",
+                     "desc":"This is button component, this can be used in varity of usecases, as in form controls, in alerts & action triggers etc.,",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon
                    },
                     {
                         "name":"Badge",
                          "path":"/Badge",
-                         "desc":"This is Badge component",
+                         "desc":"This is badge component, this can be used in varity of usecases, as in forms etc.,",
                          "logoSrc":badgeIcon,
                          "hovLogo":hovBadgeIcon
                     },
                     {
                     "name":"BreadCrumbs",
                     "path":"/BreadCrumbs",
-                    "desc":"This is BreadCrumbs component",
+                    "desc":"Breadcrumbs give users an easy-to-understand overview of where the page sits in your site.",
                     "logoSrc":breadcrumbIcon,
                     "hovLogo":hovBreadcrumbIcon
                    },
                    {
                     "name":"Cards",
                     "path":"/Cards",
-                    "desc":"This is Cards component",
+                    "desc":"This is Cards component, it can be used to display content as a box",
                     "logoSrc":card,
                     "hovLogo":hovCard
                    },
                    {
                     "name":"CircularProgress",
                     "path":"/CircularProgress",
-                    "desc":"This is  CircularProgress component",
+                    "desc":"A content-heavy website increases its loading time, wrecks the user experience, lowers the search engine ranking.",
                     "logoSrc":progressIcon,
                     "hovLogo":hovProgressIcon
                    },
                    {
                     "name":"Dialog",
                     "path":"/Dialog",
-                    "desc":"This is  Dialog component",
+                    "desc":"A Dialog is a type of modal window that appears in front of app content to provide critical information or ask for a decision. ",
                     "logoSrc":modalicon,
                     "hovLogo":hovModalIcon
                    }
@@ -109,70 +109,70 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
                 {
                   "name":"Input",
                   "path":"/Input",
-                  "desc":"This is Input component",
+                  "desc":"This is Input componentThis is Input component, this can be used in varity of usecases, as in form controls, login & user inputs etc.,",
                   "logoSrc":inputicon,
                   "hovLogo":hovInputIcon
                   } , 
                 {
                   "name":"Dropdown",
                   "path":"/Dropdown",
-                  "desc":"This is Dropdown component",
+                  "desc":"A drop-down menu embeds additional links or content, allowing you to construct more advanced navigation and link categorization.",
                   "logoSrc":dropdown,
                   "hovLogo":hovDropdown
                   } , 
                    {
                     "name":"FileUpload",
                      "path":"/FileUpload",
-                     "desc":"This is FileUpload component",
+                     "desc":"File Input is a field which the user can use to upload one or more files (photos, documents or any other file type) from local storage.",
                      "logoSrc":imageicon,
                      "hovLogo":hovImageIcon
                     } , 
                     {
                       "name":"Form",
                        "path":"/Form",
-                       "desc":"This is Form component",
+                       "desc":"This is Form component,this can be used for multi purpose forms",
                        "logoSrc":formicon,
                        "hovLogo":hovFormIcon
                      },
                      {
                       "name":"Radio",
                        "path":"/Radio",
-                       "desc":"This is Radio component",
+                       "desc":"This is Radio Button component, this can be used to select a option, as in form controls, in user query inputs & action triggers etc.,",
                        "logoSrc":radiocheckicon,
                        "hovLogo":hovRadioCheckIcon
                      },
                      {
                       "name":"Checkbox",
                        "path":"/Checkbox",
-                       "desc":"This is Checkbox component",
+                       "desc":"This is checkbox component, this can be used to select a option, as in form controls, in user query inputs & action triggers etc.",
                        "logoSrc":radiocheckicon,
                        "hovLogo":hovRadioCheckIcon
                      },
                      {
                       "name":"Toggle",
                        "path":"/Toggle",
-                       "desc":"This is Toggle component",
+                       "desc":"Switch is an on/off control that can be toggled via clicking or dragging.",
                        "logoSrc":toggleButton,
                        "hovLogo":hovToggleButton
                      },
                      {
                       "name":"QDate",
                        "path":"/QDate",
-                       "desc":"This is QDate component",
+                       "desc":"This functionality lets the user pick both the date and time within a single interface. ",
                        "logoSrc":buttonicon,
                        "hovLogo":hovButtonIcon
                      },
                      {
                       "name":"InnerLoading",
                        "path":"/InnerLoading",
-                       "desc":"This is  InnerLoading component",
+                       "desc":"Spinner is used to display progress of those tasks whose total time of completion is unknown.",
                        "logoSrc":spinnericon,
                        "hovLogo":hovSpinnerIcon
                      },
                      {
                       "name":"Menu",
                        "path":"/Menu",
-                       "desc":"This is Menu component",
+                       "desc":"Menu is a floating panel containing list of options.",
                        "logoSrc":ListGroup,
                        "hovLogo":ListGroup_Hover
                      },
@@ -188,42 +188,42 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
                      "path":"/Pagination",
                      "logoSrc":pagination,
                      "hovLogo":hovPagination,
-                     "desc":"This is Pagination component",
+                     "desc":"It lets you split a huge amount of content within the tables into smaller parts.",
                    },
                    {
                     "name":"Stepper",
                      "path":"/Stepper",
                      "logoSrc":buttonicon,
                      "hovLogo":hovButtonIcon,
-                     "desc":"This is Stepper component",
+                     "desc":"Stepper provides a wizard-like workflow by dividing content into logical steps and can be aligned vertically as well as horizontally.",
                     },
                       {
                         "name":"Tabs",
                          "path":"/Tabs",
                          "logoSrc":tabsicon,
                          "hovLogo":hovTabsIcon,
-                         "desc":"This is Tabs component",
+                         "desc":"A Tab allows multiple documents or panels to be contained within a single window and switching between the documents.",
                         },
                         {
                           "name":"Tooltip",
                            "path":"/Tooltip",
                            "logoSrc":tooltipicon,
                            "hovLogo":hovTooltipIcon,
-                           "desc":"This is Tooltip component",
+                           "desc":"A hint which appears when a cursor is positioned over an icon, image, hyperlink, or any other element in a graphical UI.",
                           },
                           {
                             "name":"InfiniteScroll",
                              "path":"/InfiniteScroll",
                              "logoSrc":buttonicon,
-                             "hovLogo":hovButtonIcon,
-                             "desc":"This is VirtualScroll component",
+                              "hovLogo":hovButtonIcon,
+                             "desc":"This is InfiniteScroll component,you can scroll to bottom and top",
                             },
                             {
                               "name":"Notify",
                                "path":"/Notify",
                                "logoSrc":alerticon,
                                "hovLogo":hovAlertIcon,
-                               "desc":"This is Notify component",
+                               "desc":"A small message that pops up at  screen and disappears on its own after a few seconds. ",
                               }
                         
                   ]
@@ -237,28 +237,28 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
            "path":"/Table",
            "logoSrc":tableicon,
            "hovLogo":hovTableIcon,
-           "desc":"This is Table component",
+           "desc":"This is Table component, this can be used to show for list of items",
           },
           {
             "name":"ApiTable(Pagination,filter)",
              "path":"/ApiTable(Pagination,filter)",
              "logoSrc":apidatatable,
              "hovLogo":hovApiDataTable,
-             "desc":"This is ServerSide Table component",
+             "desc":"The DataTables API is designed to reflect the structure of the data in the table and returns a DataTables API instance.",
             },
             {
               "name":"PopupEditingTable(shorting)",
                "path":"/PopupEditingTable(shorting)",
                "logoSrc":editabletable,
                "hovLogo":hovEditableTable,
-               "desc":"This is PopupEditing Table component",
+               "desc":"Inline Editing allows a user to select any editable element on the page and edit it in-place which looks just like the final page.",
               },
               {
                 "name":"ExportToCSVTable",
                  "path":"/ExportToCSVTable",
                  "logoSrc":buttonicon,
                  "hovLogo":hovButtonIcon,
-                 "desc":"This is ExportToCSV Table component",
+                 "desc":"This is ExportToCSV Table component,through this you can export the data from table",
                 },
       ]}
   ])
