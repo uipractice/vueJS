@@ -221,7 +221,7 @@ section > .details > .summary {
   font-size: 16px;
   font-weight: 700;
   color: #373741;
-  padding:10px 0 10px 25px;position: relative
+  padding:10px 0 0px 25px;position: relative
 }
 section > .details > .summary::before {
   position: absolute;

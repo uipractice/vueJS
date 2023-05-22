@@ -1,6 +1,6 @@
 <template>
  <div 
-   class="ownGridCard"
+   class="component-card"
       v-on:mouseover="mouseover"
       v-on:mouseleave="mouseleave">
       <img :src="logo" alt='react-logo' style="width:50px !important" />
@@ -8,6 +8,7 @@
       <div class='component-desc'>{{cardObj.desc}}</div>
     </div>
 </template>
+
 <script setup>
 import {ref} from 'vue';
 import './ComponentCard.css';
