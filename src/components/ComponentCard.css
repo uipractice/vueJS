@@ -1,11 +1,11 @@
 .component-card {
-  display: flex;
-  flex-direction: column;
-  height: 248px;
-  width: 100%;
-  max-width: 270px;
-  border: 0.5px solid rgb(236, 236, 236);
-  margin: 40px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* height: 248px; */
+  /* width: 100%; */
+  /* max-width: 270px; */
+  /* border: 0.5px solid rgb(236, 236, 236); */
+  /* margin: 40px; */
 
   transition: box-shadow 0.3s cubic-bezier(.4,0,.2,1);
   padding: 16px;
@@ -13,6 +13,22 @@
 	background: #fff;
   color: rgba(0,0,0,.87);
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+
+
+  height: 250px;
+  width: 100%;
+  width: 270px;
+  border: 0.5px solid rgb(236, 236, 236);
+  margin: 20px 15px;
+  transition: box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+  padding: 16px;
+  border-radius: 4px;
+	background: #fff;
+  color: rgba(0,0,0,.87);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+
+
+
 }
 .component-card:hover {
  /* box-shadow: 0 7px 25px 0 rgba(0,0,0,.03), 0 4px 12px 0 rgba(0,0,0,.03), 0 8px 16px 0 rgba(0,0,0,0.2); */

@@ -19,7 +19,7 @@
                       <summary class="summary">{{ menuItem.label }}</summary>
                       <details class="details">
                         <summary class="summary summary1">
-                          <p v-for="(menuSubItem, index) in menuItem.listOfSubCom" :key="index">
+                          <p v-for="(menuSubItem, index) in menuItem.listOfSubCom" :key="index" style="margin: 0px !important;">
                             <RouterLink :to="menuSubItem.path">{{ menuSubItem.name }}</RouterLink>
                           </p>
                         </summary>
@@ -74,7 +74,7 @@ export default {
   width: 100%;
 }
 section > .details > .summary {
-  padding: 10px 15px 10px 25px !important;
+  padding: 10px 15px 0px 25px !important;
 }
 a.router-link-active{
   color: #0088D1 !important;
