@@ -3,7 +3,7 @@
    class="component-card"
       v-on:mouseover="mouseover"
       v-on:mouseleave="mouseleave">
-      <img :src="logo" alt='react-logo' style="width:50px !important" />
+      <img :src="logo" alt='react-logo' style="width:40px !important" />
       <div class='component-title'>{{cardObj.name}}</div>
       <div class='component-desc'>{{cardObj.desc}}</div>
     </div>
