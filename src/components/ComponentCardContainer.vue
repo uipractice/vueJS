@@ -1,5 +1,7 @@
 <template>
-   <div class='' style="padding-bottom: 50px;">
+   <div class='' style="padding-bottom: 50px;
+    padding-top: 30px;">
+    <div class="pl-20">
     <div class='app-title' style="marginTop: '-10px'">
         <img src="https://vuejs.org/images/logo.png" class='react-logo' alt='vue logo' />
         <h3 class='react-components-title'>Vuejs Components</h3>
@@ -12,6 +14,7 @@
       <div class='app-desc'>
         Versions are implemented as follows:  :Vuejs 3.0.0,  quasar: 2.12.0
       </div>
+    </div>
     <div v-for="(menuItem,index) in menuListLocal" :key="index">
       <h3 class='component-type-desc'>{{ menuItem.label }}</h3>
   
@@ -56,26 +59,43 @@ console.log("@@@ menulist in card",menuListLocal);
   margin-right: 50px;
 }
 .react-logo{
-    height: 80px;
-    width: 80px;
-    margin-left: 20px;
+  height: 40px;
+    width: 40px;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+.pl-20{
+  padding-left: 20px;
 }
 .react-components-title {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   font-size: 28px;
   color: #023047;
   font-size: 28px;
   line-height: 25px;
-  margin-bottom: 18px;
+  /* margin-bottom: 18px; */
   font-weight: 700;
+
+
+  /* font-weight: 700; */
+    /* color: #023047; */
+    /* font-size: 28px;
+    line-height: 25px; */
+    margin-bottom: 18px;
+    margin-top: 16px;
 }
 .app-title {
-  display: flex;
-  flex-direction: row;
-}\=-.app-desc {
+  align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.app-desc {
   color: #87878d;
   text-align: left;
-  margin-left: 45px;
+  /* margin-left: 45px; */
   font-size: 14px;
+  /* color: #87878d; */
+    /* font-size: 14px; */
+    line-height: 20px;
 }
 </style>

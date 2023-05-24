@@ -10,7 +10,7 @@
         />
       </template>
 
-      <q-breadcrumbs-el label="Home"  to="/"  class="paddingTop" />
+      <q-breadcrumbs-el label="Home"  to="/"  class="paddingTop"  />
 
       <q-breadcrumbs-el label="Vuejs" to="/" class="paddingTop" />
       <q-breadcrumbs-el v-if="router.currentRoute.value.name != 'home'" :label="router.currentRoute.value.name" :to="router.currentRoute.value.name" class="paddingTop" />
@@ -35,8 +35,12 @@ import searchComponent from "./searchComponent.vue";
  .paddingTop{
   padding-top: 0px !important;
   font-size: 14px !important;
-    color: rgb(0, 136, 209) !important;
+  color: #0088d1!important;
     letter-spacing: -0.01px !important;
+
+    line-height: 27px;
+    text-transform: capitalize;
+    font-weight: 400;
  }
  a{
   text-decoration: none !important;

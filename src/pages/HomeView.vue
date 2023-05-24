@@ -3,7 +3,7 @@ import ComponentCardContainer from '../components/ComponentCardContainer.vue'
 </script>
 
 <template>
-  <main>
+  <main style="margin:0 35px">
     <ComponentCardContainer />
   </main>
 </template>
