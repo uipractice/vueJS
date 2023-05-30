@@ -45,5 +45,14 @@ import searchComponent from "./searchComponent.vue";
  a{
   text-decoration: none !important;
  }
-
+ /* .q-breadcrumbs__separator{
+  margin-left:0px !important
+ } */
+/* 
+ .q-gutter-sm  >*{
+    margin-left: 0px !important;
+} */
+.app-breadcrumbs .q-gutter-sm > *{
+  margin-left: 0px !important;
+}
 </style>
