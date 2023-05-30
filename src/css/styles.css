@@ -204,10 +204,11 @@ details > details > summary a:hover, details > details > summary a.active {
 .details > .summary:after {
   color: #373741;
   border-radius: 50%;
-  content: " \02C4";font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
   float: right;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 900;
   text-align: center;
   line-height: 28px;
   transition: all 0.3s ease-in-out;
@@ -216,7 +217,7 @@ section > .details > .details > .summary::after {
   line-height: 25px;
 }
 .details[open] > .summary:after {
-  content: " \02C5";
+  content: " \f077";
 }
 .details[open] .summary .active {
   
