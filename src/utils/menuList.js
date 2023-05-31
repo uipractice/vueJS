@@ -43,6 +43,25 @@ import imageicon from '../images/imageicon.svg';
 import hovImageIcon from '../images/hovImageIcon.svg';
 import ListGroup from '../images/ListGroup.svg'
 import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
+
+import circularProgressBar from  '../images/circularProgressBar.svg'
+import circularProgressBarHover from  '../images/circularProgressBarHover.svg'
+
+import exportToCSV from  '../images/exportToCSV.svg'
+import exportToCSVHover from  '../images/exportToCSVHover.svg'
+
+
+import checkbox from  '../images/checkbox.svg'
+import checkboxHover from  '../images/checkboxHover.svg'
+
+
+import avatar from  '../images/avatar.svg'
+import avatarHover from  '../images/avatarHover.svg'
+
+
+import infiniteScroll from  '../images/infiniteScroll.svg'
+import infiniteScrollHover from  '../images/infiniteScrollHover.svg'
+
  export const menuList = ref([
     {
      
@@ -52,8 +71,8 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
                   "name":"Avatar",
                   "path":"/avatar",
                   "desc":"This is avatar component, this can be used as a profile picture,",
-                  "logoSrc":buttonicon,
-                  "hovLogo":hovButtonIcon
+                  "logoSrc":avatar,
+                  "hovLogo":avatarHover
                   },
                    {
                     "name":"Button",
@@ -87,8 +106,8 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
                     "name":"CircularProgress",
                     "path":"/CircularProgress",
                     "desc":"A content-heavy website increases its loading time, wrecks the user experience, lowers the search engine ranking.",
-                    "logoSrc":progressIcon,
-                    "hovLogo":hovProgressIcon
+                    "logoSrc":circularProgressBar,
+                    "hovLogo":circularProgressBarHover
                    },
                    {
                     "name":"Dialog",
@@ -145,8 +164,8 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
                       "name":"Checkbox",
                        "path":"/Checkbox",
                        "desc":"This is checkbox component, this can be used to select a option, as in form controls, in user query inputs & action triggers etc.",
-                       "logoSrc":radiocheckicon,
-                       "hovLogo":hovRadioCheckIcon
+                       "logoSrc":checkbox,
+                       "hovLogo":checkboxHover
                      },
                      {
                       "name":"Toggle",
@@ -214,8 +233,8 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
                           {
                             "name":"InfiniteScroll",
                              "path":"/InfiniteScroll",
-                             "logoSrc":buttonicon,
-                              "hovLogo":hovButtonIcon,
+                             "logoSrc":infiniteScroll,
+                              "hovLogo":infiniteScrollHover,
                              "desc":"This is InfiniteScroll component,you can scroll to bottom and top",
                             },
                             {
@@ -256,8 +275,8 @@ import ListGroup_Hover from  '../images/ListGroup_Hovered.svg'
               {
                 "name":"ExportToCSVTable",
                  "path":"/ExportToCSVTable",
-                 "logoSrc":buttonicon,
-                 "hovLogo":hovButtonIcon,
+                 "logoSrc":exportToCSV,
+                 "hovLogo":exportToCSVHover,
                  "desc":"This is ExportToCSV Table component,through this you can export the data from table",
                 },
       ]}
