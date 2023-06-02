@@ -143,6 +143,11 @@ const router = createRouter({
       path: '/ExportToCSVTable',
       name: 'ExportToCSVTable',
       component: () => import('../pages/Table/ExportToCSVTableContainer.vue')
+    },
+    {
+      path: '/ExpensionItem',
+      name: 'ExpensionItem',
+      component: () => import('../pages/ExpensionItem/ExpensionItemContainer.vue')
     }
     
     

@@ -279,6 +279,17 @@ import infiniteScrollHover from  '../images/infiniteScrollHover.svg'
                  "hovLogo":exportToCSVHover,
                  "desc":"This is ExportToCSV Table component,through this you can export the data from table",
                 },
-      ]}
+      ]},
+      {
+        label: 'Custome Component',
+        listOfSubCom:[
+          {
+            "name":"Expension Item",
+             "path":"/ExpensionItem",
+             "logoSrc":tableicon,
+             "hovLogo":hovTableIcon,
+             "desc":"This is ExpensionItem component, this can be used to show for list of items",
+            },]
+      }
   ])
 

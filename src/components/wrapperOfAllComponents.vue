@@ -80,11 +80,13 @@ import NotifyDemoCode from '@/pages/Notify/NotifyDemoCode.vue';
 import PopupEditingTableDemoCode from '@/pages/Table/PopupEditingTableDemoCode.vue';
 import ServerSideTableDemoCode from '@/pages/Table/ServerSideTableDemoCode.vue';
 import ExportToCSVTableDemoCode from '@/pages/Table/ExportToCSVTableDemoCode.vue';
+import ExpensionItemDemoCode from '@/pages/ExpensionItem/ExpensionItemDemoCode.vue';
+
 
 import '../css/styles.css'
 
 
- var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode,PaginationDemoCode,TooltipDemoCode,TabsDemoCode,StepperDemoCode,TableDemoCode,InfiniteScrollDemoCode,NotifyDemoCode,PopupEditingTableDemoCode,ServerSideTableDemoCode,ExportToCSVTableDemoCode]
+ var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode,PaginationDemoCode,TooltipDemoCode,TabsDemoCode,StepperDemoCode,TableDemoCode,InfiniteScrollDemoCode,NotifyDemoCode,PopupEditingTableDemoCode,ServerSideTableDemoCode,ExportToCSVTableDemoCode,ExpensionItemDemoCode]
 
  const propsObj = defineProps({
     propsCode : {
