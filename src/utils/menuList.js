@@ -284,7 +284,7 @@ import infiniteScrollHover from  '../images/infiniteScrollHover.svg'
         label: 'Custome Component',
         listOfSubCom:[
           {
-            "name":"Expension Item",
+            "name":"ExpensionItem",
              "path":"/ExpensionItem",
              "logoSrc":tableicon,
              "hovLogo":hovTableIcon,
