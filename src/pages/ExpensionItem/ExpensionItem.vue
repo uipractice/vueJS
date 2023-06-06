@@ -1,6 +1,10 @@
 
 <template>
     <div class="q-pa-md" >
+      <div style="margin-bottom: 10px;">
+        <q-btn color="white" text-color="black" label="Add item" @click="addItemClick()">
+                    </q-btn>
+        </div>
       <q-list bordered class="rounded-borders" v-for="item in listOfExpensionItem" :key="item">
        
         <q-expansion-item
@@ -12,6 +16,10 @@
           <q-card>
             <q-card-section>
                   {{ item.description }}
+                  <div>
+                  <q-btn color="white" text-color="black" label="Remove" @click="removeItem(item)">
+                    </q-btn>
+                  </div>
             </q-card-section>
           </q-card>
         </q-expansion-item>
@@ -27,4 +35,14 @@
      const props = defineProps({
         listOfExpensionItem: Array
             })
+      
+    const emit= defineEmits()
+ 
+
+      function removeItem(item){
+        emit("removeItem",item);
+      }
+      function addItemClick(){
+        emit("addItem");
+      }
     </script>
