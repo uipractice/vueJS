@@ -2,7 +2,7 @@
 <template>
   <div>
     <div v-if="listOfExpensionItem.length">
-      <ExpensionItem :listOfExpensionItem="listOfExpensionItem" @removeItem="onRemoveItemclick" @addItem="onAddItemClick"></ExpensionItem>
+      <ExpensionItem :listOfExpensionItem="listOfExpensionItem" :isAddItem="isAddItem" :isRemove="isRemoveItem" @removeItem="onRemoveItemclick" @addItem="onAddItemClick"></ExpensionItem>
     </div>
    
     <div>
@@ -17,7 +17,7 @@
         </tr>
         <tr>
           <td>Remove item</td>
-          <td><q-toggle v-model="isRemoveItem"  @click="isRemoveItemClick()"/></td>
+          <td><q-toggle v-model="isRemoveItem"  /></td>
         </tr>
       </table>
     </div>
@@ -69,11 +69,6 @@
          
     }
    ]
-
-   function isRemoveItemClick(){
-    console.log("isRemoveItemClick",isRemoveItem.value);
-   }
-
    function onRemoveItemclick(item){
     console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ remove",item)
        

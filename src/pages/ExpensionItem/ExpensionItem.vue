@@ -2,7 +2,7 @@
 <template>
     <div class="q-pa-md" >
       <div style="margin-bottom: 10px;">
-        <q-btn color="white" text-color="black" label="Add item" @click="addItemClick()">
+        <q-btn v-if="isAddItem" color="white" text-color="black" label="Add item" @click="addItemClick()">
                     </q-btn>
         </div>
       <q-list bordered class="rounded-borders" v-for="item in listOfExpensionItem" :key="item">
@@ -17,7 +17,7 @@
             <q-card-section>
                   {{ item.description }}
                   <div>
-                  <q-btn color="white" text-color="black" label="Remove" @click="removeItem(item)">
+                  <q-btn v-if="isRemove" color="white" text-color="black" label="Remove" @click="removeItem(item)">
                     </q-btn>
                   </div>
             </q-card-section>
@@ -33,7 +33,9 @@
     <script setup>
      import { ref } from 'vue'
      const props = defineProps({
-        listOfExpensionItem: Array
+        listOfExpensionItem: Array,
+        isRemove:Boolean,
+        isAddItem:Boolean
             })
       
     const emit= defineEmits()
