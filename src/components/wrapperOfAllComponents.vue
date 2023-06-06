@@ -24,6 +24,7 @@
             <!-- <div class="text-h6" >demo</div> -->
             <!-- prop name{{propsObj.propsDemo }}
             {{ compoNames }} -->
+            <!-- {{ finalCompoName }} -->
               <div v-for="(compoName,index) in finalCompoName" :key="index">
              
                 <component  :is="compoName">
@@ -80,11 +81,13 @@ import NotifyDemoCode from '@/pages/Notify/NotifyDemoCode.vue';
 import PopupEditingTableDemoCode from '@/pages/Table/PopupEditingTableDemoCode.vue';
 import ServerSideTableDemoCode from '@/pages/Table/ServerSideTableDemoCode.vue';
 import ExportToCSVTableDemoCode from '@/pages/Table/ExportToCSVTableDemoCode.vue';
+import ExpensionItemDemoCode from '@/pages/ExpensionItem/ExpensionItemDemoCode.vue';
+import GridDemoCode from '@/pages/Grid/GridDemoCode.vue';
 
 import '../css/styles.css'
 
 
- var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode,PaginationDemoCode,TooltipDemoCode,TabsDemoCode,StepperDemoCode,TableDemoCode,InfiniteScrollDemoCode,NotifyDemoCode,PopupEditingTableDemoCode,ServerSideTableDemoCode,ExportToCSVTableDemoCode]
+ var compoNames = [ButtonDemoCode,AvatarDemoCode,BadgeDemoCode,BreadCrumbsDemoCode,CardsDemoCode,CircularProgressDemoCode,DialogDemoCode,InputDemoCode,DropdownDemoCode,FileUploadDemoCode,FormDemoCode,RadioDemoCode,CheckboxDemoCode,ToggleDemoCode,QdateDemoCode,InnerLoadingDemoCode,MenuDemoCode,PaginationDemoCode,TooltipDemoCode,TabsDemoCode,StepperDemoCode,TableDemoCode,InfiniteScrollDemoCode,NotifyDemoCode,PopupEditingTableDemoCode,ServerSideTableDemoCode,ExportToCSVTableDemoCode,ExpensionItemDemoCode,GridDemoCode]
 
  const propsObj = defineProps({
     propsCode : {
@@ -99,9 +102,16 @@ var  tab = ref('demo')
 var filterCompoNames = []
 
 filterCompoNames =compoNames.filter(compo=>{
-        if(compo.__name == propsObj.propsDemo){
+  var componentName = ""
+        if(compo.__name == undefined){
+          componentName = compo.name
+        }else{
+          componentName = compo.__name
+        }
+        if(componentName == propsObj.propsDemo){
           return compo
         }
+        
 })
 
 const finalCompoName = computed(()=>{
