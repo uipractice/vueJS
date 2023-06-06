@@ -148,8 +148,12 @@ const router = createRouter({
       path: '/ExpensionItem',
       name: 'ExpensionItem',
       component: () => import('../pages/ExpensionItem/ExpensionItemContainer.vue')
+    },
+    {
+      path: '/Grid',
+      name: 'Grid',
+      component: () => import('../pages/Grid/GridContainer.vue')
     }
-    
     
    
     

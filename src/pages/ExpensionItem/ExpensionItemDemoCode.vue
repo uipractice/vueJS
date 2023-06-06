@@ -1,33 +1,40 @@
 
 <template>
-  <div class="q-pa-md" >
-    <q-list bordered class="rounded-borders" v-for="(item,index) in list" :key="item">
-     
-      <q-expansion-item
-        expand-separator
-        :icon="item.icon"
-        :label="item.label"
-        :caption="item.caption"
-      >
-        <q-card>
-          <q-card-section>
-                {{ item.description }}
-          </q-card-section>
-        </q-card>
-      </q-expansion-item>
-
-    
-    </q-list>
-  </div>
+  <div>
+    <div v-if="listOfExpensionItem.length">
+      <ExpensionItem :listOfExpensionItem="listOfExpensionItem"></ExpensionItem>
+    </div>
+   
+    <div>
+      <table>
+        <tr>
+          <th>options</th>
+          <th>values</th>
+        </tr>
+        <tr>
+          <td>Add item</td>
+          <td><q-toggle v-model="isAddItem" /></td>
+        </tr>
+        <tr>
+          <td>Remove item</td>
+          <td><q-toggle v-model="isRemoveItem"  @click="isRemoveItemClick()"/></td>
+        </tr>
+      </table>
+    </div>
+   
+ </div>
 </template>
 
 
   <script setup>
    import { ref } from 'vue'
+   import ExpensionItem from './ExpensionItem.vue';
 
-   var list = ref([])
-
-  list.value = [
+  var isAddItem = ref(false)
+  var isRemoveItem = ref(false)
+   var listOfExpensionItem = ref([])
+  
+  listOfExpensionItem.value = [
     {"icon":"perm_identity",
      "label":"Account settings",
      "caption":"John Doe",
@@ -53,4 +60,8 @@
          
     }
    ]
+
+   function isRemoveItemClick(){
+    console.log("isRemoveItemClick",isRemoveItem.value);
+   }
   </script>
