@@ -2,7 +2,7 @@
 <template>
   <div>
     <div v-if="listOfExpensionItem.length">
-      <ExpensionItem :listOfExpensionItem="listOfExpensionItem"></ExpensionItem>
+      <ExpensionItem :listOfExpensionItem="listOfExpensionItem" :isAddItem="isAddItem" :isRemove="isRemoveItem" @removeItem="onRemoveItemclick" @addItem="onAddItemClick"></ExpensionItem>
     </div>
    
     <div>
@@ -17,7 +17,7 @@
         </tr>
         <tr>
           <td>Remove item</td>
-          <td><q-toggle v-model="isRemoveItem"  @click="isRemoveItemClick()"/></td>
+          <td><q-toggle v-model="isRemoveItem"  /></td>
         </tr>
       </table>
     </div>
@@ -35,33 +35,66 @@
    var listOfExpensionItem = ref([])
   
   listOfExpensionItem.value = [
-    {"icon":"perm_identity",
+
+    {
+      "id":1,
+      "icon":"perm_identity",
      "label":"Account settings",
      "caption":"John Doe",
      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupticommodi magni quaerat ex numquam dolorum officiis modi facere maiores architecto suscipit ist eveniet doloribus ullam aliquid",
          
     },
-    {"icon":"signal_wifi_off",
+    {
+      "id":2,
+      "icon":"signal_wifi_off",
      "label":"Wifi settings",
      "caption":"John Doe",
      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupticommodi magni quaerat ex numquam dolorum officiis modi facere maiores architecto suscipit ist eveniet doloribus ullam aliquid",
          
     },
-    {"icon":"drafts",
+    {
+      "id":3,
+      "icon":"drafts",
      "label":"Drafts",
      "caption":"John Doe",
      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupticommodi magni quaerat ex numquam dolorum officiis modi facere maiores architecto suscipit ist eveniet doloribus ullam aliquid",
          
     },
-    {"icon":"assessment",
+    {
+      "id":4,
+      "icon":"assessment",
      "label":"assessment",
      "caption":"John Doe",
      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupticommodi magni quaerat ex numquam dolorum officiis modi facere maiores architecto suscipit ist eveniet doloribus ullam aliquid",
          
     }
    ]
+   function onRemoveItemclick(item){
+    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ remove",item)
+       
+    for (var i = 0; i < listOfExpensionItem.value.length; i++) {
+      if (listOfExpensionItem.value[i].id === item.id) {
+        listOfExpensionItem.value.splice(i, 1);
+        break;
+      }
+    }
+    console.log("after remove",listOfExpensionItem.value);
+   }
+  
+   function onAddItemClick(){
+    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ add")
 
-   function isRemoveItemClick(){
-    console.log("isRemoveItemClick",isRemoveItem.value);
+    listOfExpensionItem.value.push(
+      {
+      "id":5,
+      "icon":"drafts",
+     "label":"extra assessment",
+     "caption":"John Doe",
+     "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupticommodi magni quaerat ex numquam dolorum officiis modi facere maiores architecto suscipit ist eveniet doloribus ullam aliquid",
+         
+    }
+    )
+
+      
    }
   </script>
