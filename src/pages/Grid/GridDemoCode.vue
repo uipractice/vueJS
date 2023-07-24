@@ -1,5 +1,5 @@
 <template>
-      hi
+      
       <div>
         <div class="row no-wrap justify-around q-px-md q-pt-md">
           <div
