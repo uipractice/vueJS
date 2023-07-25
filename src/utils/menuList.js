@@ -289,16 +289,7 @@ import infiniteScrollHover from  '../images/infiniteScrollHover.svg'
              "logoSrc":tableicon,
              "hovLogo":hovTableIcon,
              "desc":"This is ExpensionItem component, this can be used to show for list of items",
-            },
-          {
-
-            "name":"Grid",
-            "path":"/Grid",
-            "logoSrc":tableicon,
-            "hovLogo":hovTableIcon,
-            "desc":"This is Grid component, this can be used to show for list of items",
-            
-          }
+            }
           ]
       }
   ])
